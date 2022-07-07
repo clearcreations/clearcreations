@@ -1,0 +1,22 @@
+.btn{
+    font-family: var(--secondary-font);
+    font-size: 1.125rem;
+  }
+
+  .consult-btn{
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-droplet{
+    padding-right: 5px;
+    z-index: 0;
+    width: 41px;
+    height: 24px;
+  }
+  
+  .consult-btn h4{
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }

@@ -1,0 +1,133 @@
+/* Tabs Components */
+.home-tabs{
+    padding-bottom: 200px;
+}
+
+.home-tabs-nav{
+    padding-left: 0;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.home-tabs-nav li{
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0 40px 0 0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.home-tabs-nav li h4:hover,
+.home-tabs-nav .active{
+    color: var(--sapphire);
+    font-weight: 500;
+}
+
+.tab-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-left{
+    width: 60%;
+}
+
+.tab-left .headline{
+    margin-bottom: 15px;
+}
+
+.tab-left .body-lg{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.tab-right{
+    width: 100%;
+    position: relative;
+}
+
+.tab-cards{
+    float: right;
+}
+
+.card{
+    width: 400px;
+    display: flex;
+    padding: 25px;
+    margin-bottom: 25px;
+    align-items: center;
+    box-shadow: 
+    -2px 0px 4px 0 rgba(0, 0, 0, 0.25),
+    2px 5px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.card-text{
+    margin-left: 25px;
+    width: 100%;
+}
+
+.card-icon-container{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    box-shadow: 
+    -2px 0px 4px 0 rgba(0, 0, 0, 0.25),
+    2px 5px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.card-icon{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Media Queries */
+@media(max-width: 1200px){
+    .home-tabs-nav{
+        width: 100%;
+    }
+
+    .tab-left{
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+    .home-tabs-nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tab-content{
+        flex-direction: column;
+    }
+
+    .tab-left,
+    .tab-right{
+        width: 100%;
+    }
+
+    .tab-left{
+        margin-bottom: 25px;
+    }
+
+    .tab-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+}

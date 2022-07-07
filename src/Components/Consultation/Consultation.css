@@ -1,0 +1,157 @@
+/* Consultation Component */
+.contact{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.contact-left{
+    width: 50%;
+}
+
+.contact-right{
+    padding-left: 20%;
+}
+
+.contact-text{
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+form .form-row{
+    display: flex;
+    margin: 0;
+}
+
+form .form-row .input-data{
+    width: 100%;
+    height: 50px;
+    margin: 25px 15px 0 0;
+    position: relative;
+}
+
+form .form-row .textarea{
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.input-data input,
+.textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 0.87rem;
+    border-bottom: 2px solid var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:focus ~ label,
+.textarea textarea:valid ~ label{
+    transform: translateY(-25px);
+    font-size: 0.875rem;
+    color: var(--sapphire);
+}
+
+.textarea textarea{
+    resize: none;
+    padding-top: 20px;
+}
+
+.input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #F8F8FF;
+}
+
+.input-data .underline:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #0F52BA;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #0E0E0E inset;
+    box-shadow: 0 0 0 30px #0E0E0E inset;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: #F8F8FF !important;
+}
+
+.submit-btn .input-data{
+    overflow: hidden;
+    height: 45px;
+    width: 25%;
+    border-bottom: none;
+    /* border: 2px solid var(--text-color) !important */
+}
+
+.lg-img{
+    width: 450px;
+    height: 450px;
+}
+
+.sm-img{
+    width: 250px;
+    height: 250px;
+    margin-top: -175px;
+    margin-left: -110px;
+    background: none;
+    border: 5px solid #0E0E0E;
+    border-radius: 50%;
+}
+
+/* Media Queries */
+/* Consultation Component */
+@media(max-width: 1200px) and (min-width: 1000px){
+    .form-row{
+        flex-direction: column;
+        margin: 0 !important;
+    }
+
+    .form-row .input-data{
+        margin-bottom: 15px !important;
+    }
+}
+@media(max-width: 1000px) and (min-width: 0px){
+    .contact-right{
+        display: none;
+    }
+    .contact-left{
+        width: 100%;
+    }
+
+    .form-row{
+        flex-direction: column;
+    }
+
+}

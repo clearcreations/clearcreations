@@ -1,0 +1,515 @@
+/* Home Component */
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.hero-right{
+    height: 100%;
+}
+
+.hero-left{
+    width: 60%;
+    height: 100%;
+    padding: 200px 0;
+}
+
+.hero-headline{
+    margin-bottom: 25px;
+}
+
+.hero-body{
+    width: 100%x;
+    margin-bottom: 25px;
+}
+
+.scroll-indicator{
+    width: 15px;
+    padding-top: 20%;
+    padding-bottom: 10px;
+	position: relative;
+	opacity: 0.5;
+}
+
+.scroll-indicator::before,
+.scroll-indicator::after{
+    content: "";
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scroll-indicator::before{
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    border: 1px solid #05C878;
+    animation: dot 3s infinite ease-in-out;
+}
+
+.scroll-indicator::after{
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #05C878;
+    border-bottom: 1px solid #05C878;
+    transform: rotate(45deg);
+    animation: arrow 3s infinite ease-in-out;
+    animation-delay: 0.75s;
+    opacity: 0.25;
+}
+
+.scroll-indicator > div{
+    display: block;
+}
+
+.scroll-indicator > div::before,
+.scroll-indicator > div::after{
+    content: "";
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+    border: 1px solid #05C878;
+    animation: dot 3s infinite ease-in-out;
+}
+
+.scroll-indicator > div::before{
+    width: 8px;
+    height: 8px;
+    animation-delay: 0.25s;
+}
+
+.scroll-indicator > div::after{
+    width: 6px;
+    height: 6px;
+    animation-delay: 0.5s;
+}
+
+@keyframes dot {
+	0% {
+		transform: scale(0.75);
+		opacity: 0.25;
+	}
+	25% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.75);
+		opacity: 0.25;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		transform: scale(0.75) rotate(45deg);
+		opacity: 0.25;
+	}
+	25% {
+		transform: scale(1) rotate(45deg);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(0.75) rotate(45deg);
+		opacity: 0.25;
+	}
+}
+
+.the-brand-blurb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.the-brand-left{
+    width: 50%;
+}
+
+.the-brand-left-text{
+    width: 80%;
+}
+
+.the-brand-right{
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.the-brand-right-text{
+    float: right;
+    width: 70%;
+}
+
+.image-container{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    gap: 20px;
+}
+
+.image1{
+    width: 60%;
+    background-image: url(../Images/image1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image2{
+    width: 40%;
+    float: right;
+    background-image: url(../Images/image2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.random-blurb{
+    width: 980px;
+    margin: auto;
+    padding: 150px 0;
+}
+
+.industries-section{
+    width: 100%;
+    margin: auto;
+}
+
+.industries-section-top{
+    width: 80%;
+    margin: auto;
+}
+
+.industry-grid{
+    width: 80%;
+    margin: 100px auto 0 auto;
+}
+
+.industry-card{
+    width: 100%;
+    height: 450px ;
+    overflow-y: hidden;
+    margin: 10px;
+    position: relative;
+}
+
+.industry-card .food-bev-img{
+    height: 100%;
+    width: 100%;
+    background-image: url(../Images/foodbev.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.industry-card .non-profit-img{
+    height: 100%;
+    width: 100%;
+    background-image: url(../Images/nonprofit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.industry-card .cannabis-img{
+    height: 100%;
+    width: 100%;
+    background-image: url(../Images/cannabis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.industry-card .tech-img{
+    height: 100%;
+    width: 100%;
+    background-image: url(../Images/technology.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-left,
+.grid-right{
+    display: flex;
+}
+
+.industry-title{
+    font-size: 2rem;
+}
+
+.industry-description{
+    font-size: 1.25rem;
+}
+
+.card-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 14, 14, 0.6);
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    overflow: hidden;
+}
+
+.card-overlay p{
+    background: none;
+    padding: 5px 25px;
+    overflow: hidden;
+}
+
+.card-overlay .industry-description{
+    width: 80%;
+    overflow: hidden;
+}
+
+.blur{
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+}
+
+.card-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+    overflow: hidden;
+}
+
+.card-overlay:hover {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.card-overlay:hover{
+    transform: translateY(0);
+    overflow: hidden;
+}
+
+.card-overlay p:hover{
+    opacity: 1;
+    overflow: hidden;
+}
+
+.what-we-do{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.what-we-do-left{
+    width: 50%;
+}
+
+.what-we-do-left-text{
+    width: 80%;
+}
+
+.what-we-do-right{
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.what-we-do-right-text{
+    float: right;
+    width: 70%;
+}
+
+.services-tabs{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Media Queries */
+/* Home Component */
+@media(max-width: 1200px){
+    .home-tabs-nav{
+        width: 100%;
+    }
+
+    .tab-left{
+        width: 100%;
+    }
+}
+
+@media(max-width:1024px){
+    .the-brand-blurb{
+        flex-direction: column;
+    }
+
+    .the-brand-left,
+    .the-brand-right{
+        width: 100%;
+        margin: auto;
+    }
+
+    .the-brand-left{
+        margin-bottom: 25px;
+    }
+
+    .the-brand-right-text{
+        float: none;
+    }
+
+    .the-brand-right p{
+        margin-bottom: 25px;
+    }
+
+    .what-we-do{
+        flex-direction: column;
+    }
+
+    .what-we-do-left,
+    .what-we-do-right{
+        width: 100%;
+    }
+
+    .what-we-do-left{
+        margin-bottom: 25px;
+    }
+
+    .what-we-do-right-text{
+        float: none;
+    }
+
+    .what-we-do-right p{
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 1000px){
+    .industry-grid{
+        width: 100%;
+    }
+
+    .industry-grid .grid-left,
+    .industry-grid .grid-right{
+        flex-direction: column;
+    }
+
+    .industry-card{
+        margin: 0;
+    }
+}
+
+@media(max-width: 768px){
+    .hero-section{
+        flex-direction: column-reverse;
+        height: 100%;
+        margin-bottom: 50px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width: 100%;
+    }
+
+    .scroll-indicator{
+        padding-top: 100px;
+    }
+
+    .image2{
+        display: none;
+    }
+
+    .image1{
+        width: 100%;
+    }
+
+    .random-blurb{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .industry-grid,
+    .industry-card{
+        width: 100%;
+    }
+
+    .home-tabs-nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tab-content{
+        flex-direction: column;
+    }
+
+    .tab-left,
+    .tab-right{
+        width: 100%;
+    }
+
+    .tab-left{
+        margin-bottom: 25px;
+    }
+
+    .tab-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .the-brand-left-text,
+    .the-brand-right-text,
+    .what-we-do-left-text,
+    .what-we-do-right-text{
+        width: 100%;
+    }
+}
+
+@media(hover : hover){
+    .card-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(14, 14, 14, 0.6);
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+        overflow: hidden;
+    }
+    
+    .card-overlay p{
+        background: none;
+        padding: 5px 25px;
+        overflow: hidden;
+    }
+    
+    .card-overlay .industry-description{
+        width: 80%;
+        overflow: hidden;
+    }
+    
+    .blur{
+        backdrop-filter: blur(3px);
+        overflow: hidden;
+    }
+    
+    .card-overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+        overflow: hidden;
+    }
+    
+    .card-overlay:hover {
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+    .card-overlay:hover{
+        transform: translateY(0);
+        overflow: hidden;
+    }
+    
+    .card-overlay p:hover{
+        opacity: 1;
+        overflow: hidden;
+    }
+}

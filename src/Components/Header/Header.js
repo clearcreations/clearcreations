@@ -19,7 +19,6 @@ const Header = () => {
     } else setIcon("nav__toggler");
   };
 
-  //Headass
   return (
     <nav className="nav">
       <Link className='nav-logo' to='/'>

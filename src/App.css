@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/* Global Styling */
+:root{
+  --primary-font: 'Cormorant Garamond', 'serif';
+  --secondary-font: 'Work Sans', 'sans-serif';
+  --sapphire: #0F52BA;
+  --emerald: #05C878;
+  --bg-color: #0E0E0E;
+  --text-color: #F8F8FF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: var(--text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app{
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+::-webkit-scrollbar{
+  width: 0;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+h1{
+  font-family: var(--primary-font);
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+h2{
+  font-family: var(--primary-font);
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+h3{
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h4{
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+h5{
+  font-family: var(--secondary-font);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+  background: none;
+}
+
+.emphasize{
+  font-family: var(--primary-font);
+  font-size: 4rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--sapphire);
+}
+
+.nav-link{
+  font-family: var(--secondary-font);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.btn{
+  font-family: var(--secondary-font);
+  font-size: 1.125rem;
+}
+
+.body-lg{
+  font-family: var(--secondary-font);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.body-reg{
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+}
+
+.body-sm{
+  font-family: var(--secondary-font);
+  font-size: 0.875rem;
+  font-weight: 100;
+}
+
+.consult-btn{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-droplet{
+  padding-right: 5px;
+  z-index: 0;
+  width: 41px;
+  height: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.consult-btn h4{
+  font-family: var(--secondary-font);
+  font-size: 1.25rem;
+  font-weight: 400;
 }

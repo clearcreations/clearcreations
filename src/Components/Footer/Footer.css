@@ -1,0 +1,108 @@
+/* Footer Component */
+.footer{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.top-footer, .middle-footer, .bottom-footer{
+    display: flex;
+}
+
+.top-footer{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top-footer .right-column{
+    display: flex;
+    align-items: center;
+}
+
+.top-footer .right-column h4{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+}
+
+.middle-footer{
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.middle-footer img.footer-logo{
+    width: 80%;
+}
+
+.middle-footer .left-column .footer-about{
+    width: 280px;
+    line-height: 20px;
+}
+
+.middle-footer .right-column{
+    display: flex;
+}
+
+.middle-footer .right-column .body-reg{
+    margin-bottom: 10px;
+}
+
+.middle-footer .right-column .body-sm{
+    margin-bottom: 5px;
+}
+
+.services-column{
+    padding-left: 100px;
+}
+
+.footer-services{
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-footer{
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.social-links a{
+    padding-right: 25px;
+}
+
+.legal{
+    display: flex;
+}
+
+.legal a{
+    padding-left: 25px;
+}
+
+/* Media Queries */
+/* Footer Component */
+@media(max-width: 1024px){
+    .middle-footer.right-column,
+    .middle-footer.service-column,
+    .bottom-footer{
+        white-space: nowrap;
+    }
+
+    .top-footer{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .top-footer .right-column{
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 768px){
+    .middle-footer .left-column{
+        display: none;
+    }
+
+    .bottom-footer .legal{
+        display: none;
+    }
+}

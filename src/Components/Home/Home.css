@@ -12,7 +12,7 @@
 .hero-left{
     width: 60%;
     height: 100%;
-    padding: 200px 0;
+    padding: 200px 0 0 0;
 }
 
 .hero-headline{
@@ -115,207 +115,86 @@
 	}
 }
 
-.the-brand-blurb{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 150px;
-}
-
-.the-brand-left{
-    width: 50%;
-}
-
-.the-brand-left-text{
-    width: 80%;
-}
-
-.the-brand-right{
-    width: 50%;
-    margin-bottom: 25px;
-}
-
-.the-brand-right-text{
-    float: right;
-    width: 70%;
-}
-
-.image-container{
-    width: 100%;
-    height: 450px;
-    display: flex;
-    gap: 20px;
-}
-
-.image1{
-    width: 60%;
-    background-image: url(../Images/image1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.image2{
-    width: 40%;
-    float: right;
-    background-image: url(../Images/image2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .random-blurb{
-    width: 980px;
-    margin: auto;
-    padding: 150px 0;
-}
-
-.industries-section{
-    width: 100%;
-    margin: auto;
-}
-
-.industries-section-top{
-    width: 80%;
-    margin: auto;
-}
-
-.industry-grid{
-    width: 80%;
-    margin: 100px auto 0 auto;
-}
-
-.industry-card{
-    width: 100%;
-    height: 450px ;
-    overflow-y: hidden;
-    margin: 10px;
-    position: relative;
-}
-
-.industry-card .food-bev-img{
-    height: 100%;
-    width: 100%;
-    background-image: url(../Images/foodbev.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.industry-card .non-profit-img{
-    height: 100%;
-    width: 100%;
-    background-image: url(../Images/nonprofit.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-}
-
-.industry-card .cannabis-img{
-    height: 100%;
-    width: 100%;
-    background-image: url(../Images/cannabis.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.industry-card .tech-img{
-    height: 100%;
-    width: 100%;
-    background-image: url(../Images/technology.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.grid-left,
-.grid-right{
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.industry-title{
-    font-size: 2rem;
-}
-
-.industry-description{
-    font-size: 1.25rem;
-}
-
-.card-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
+.blurb{
     width: 100%;
     height: 100%;
-    background: rgba(14, 14, 14, 0.6);
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out;
-    overflow: hidden;
-}
-
-.card-overlay p{
-    background: none;
-    padding: 5px 25px;
-    overflow: hidden;
-}
-
-.card-overlay .industry-description{
-    width: 80%;
-    overflow: hidden;
-}
-
-.blur{
-    backdrop-filter: blur(3px);
-    overflow: hidden;
-}
-
-.card-overlay > * {
-    transform: translateY(20px);
-    transition: transform 0.25s;
-    overflow: hidden;
-}
-
-.card-overlay:hover {
-    opacity: 1;
-    overflow: hidden;
-}
-
-.card-overlay:hover{
-    transform: translateY(0);
-    overflow: hidden;
-}
-
-.card-overlay p:hover{
-    opacity: 1;
-    overflow: hidden;
-}
-
-.what-we-do{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
-.what-we-do-left{
+.blurb-left,
+.blurb-right{
     width: 50%;
 }
 
-.what-we-do-left-text{
+.blurb-left-text{
     width: 80%;
 }
 
-.what-we-do-right{
-    width: 50%;
+.blurb-right-text{
+    width: 65%;
+    float: right;
+}
+
+.blurb-right-text p{
     margin-bottom: 25px;
 }
 
-.what-we-do-right-text{
-    float: right;
-    width: 70%;
+/* Services Section */
+.service-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.services-tabs{
-    width: 50%;
+.services-section .services-blurb{
+    margin-bottom: 0;
+    padding-bottom: 15rem;
+}
+
+.services-info{
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.service-title{
+    color: var(--sapphire);
+}
+
+.service-headline{
+    margin-bottom: 15px;
+}
+
+.service-body{
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.closing-cta{
+    height: 100%;
+    padding: 300px 0 250px 0;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.closing-cta h1{
+    margin-bottom: 35px;
 }
 
 /* Media Queries */
@@ -331,62 +210,11 @@
 }
 
 @media(max-width:1024px){
-    .the-brand-blurb{
-        flex-direction: column;
+    .services-section .services-blurb{
+        padding-bottom: 4.5rem;
     }
-
-    .the-brand-left,
-    .the-brand-right{
-        width: 100%;
-        margin: auto;
-    }
-
-    .the-brand-left{
-        margin-bottom: 25px;
-    }
-
-    .the-brand-right-text{
-        float: none;
-    }
-
-    .the-brand-right p{
-        margin-bottom: 25px;
-    }
-
-    .what-we-do{
-        flex-direction: column;
-    }
-
-    .what-we-do-left,
-    .what-we-do-right{
-        width: 100%;
-    }
-
-    .what-we-do-left{
-        margin-bottom: 25px;
-    }
-
-    .what-we-do-right-text{
-        float: none;
-    }
-
-    .what-we-do-right p{
-        margin-bottom: 25px;
-    }
-}
-
-@media(max-width: 1000px){
-    .industry-grid{
-        width: 100%;
-    }
-
-    .industry-grid .grid-left,
-    .industry-grid .grid-right{
-        flex-direction: column;
-    }
-
-    .industry-card{
-        margin: 0;
+    .services-info{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -406,110 +234,48 @@
         padding-top: 100px;
     }
 
-    .image2{
-        display: none;
-    }
-
-    .image1{
-        width: 100%;
-    }
-
-    .random-blurb{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .industry-grid,
-    .industry-card{
-        width: 100%;
-    }
-
-    .home-tabs-nav{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .tab-content{
+    .blurb{
         flex-direction: column;
     }
 
-    .tab-left,
-    .tab-right{
+    .blurb-left,
+    .blurb-right,
+    .blurb-left-text,
+    .blurb-right-text{
         width: 100%;
+        float: none;
     }
 
-    .tab-left{
-        margin-bottom: 25px;
-    }
-
-    .tab-right{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card{
-        width: 100%;
-    }
-
-    .the-brand-left-text,
-    .the-brand-right-text,
-    .what-we-do-left-text,
-    .what-we-do-right-text{
-        width: 100%;
+    .blurb-left{
+        margin-bottom: 15px;
     }
 }
 
-@media(hover : hover){
-    .card-overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+@media(max-width: 500px){
+    .hero-section{
+        margin: 250px 0 100px 0;
         height: 100%;
-        background: rgba(14, 14, 14, 0.6);
-        opacity: 0;
-        transition: opacity 0.25s ease-in-out;
-        overflow: hidden;
     }
-    
-    .card-overlay p{
-        background: none;
-        padding: 5px 25px;
-        overflow: hidden;
+
+    .hero-left{
+        padding: 0;
+        height: 100%
     }
-    
-    .card-overlay .industry-description{
-        width: 80%;
-        overflow: hidden;
+
+    .hero-right{
+        display: none;
     }
-    
-    .blur{
-        backdrop-filter: blur(3px);
-        overflow: hidden;
+
+    .scroll-indicator{
+        padding-top: 150px;
     }
-    
-    .card-overlay > * {
-        transform: translateY(20px);
-        transition: transform 0.25s;
-        overflow: hidden;
+
+    .the-brand-blurb,
+    .what-we-do{
+        margin-bottom: 0;
     }
-    
-    .card-overlay:hover {
-        opacity: 1;
-        overflow: hidden;
-    }
-    
-    .card-overlay:hover{
-        transform: translateY(0);
-        overflow: hidden;
-    }
-    
-    .card-overlay p:hover{
-        opacity: 1;
-        overflow: hidden;
+
+    .closing-cta{
+        padding: 150px 0;
     }
 }

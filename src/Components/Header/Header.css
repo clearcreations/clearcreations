@@ -1,12 +1,13 @@
 /* Header Component */
 .nav {
+    background: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
     width: 80%;
-    height: 100%;
-    margin: auto;
-    padding: 50px 0;
+    left: 10%;
+    padding: 25px 0;
 }
 
 .nav-logo-img{
@@ -80,5 +81,15 @@
     }
     .toggle .line3 {
     transform: rotate(45deg) translate(-8px, -10px);
+    }
+}
+
+@media(max-width: 500px){
+    .nav{
+        padding: 25px 0;
+    }
+
+    .nav-logo-img{
+        width: 30%;
     }
 }

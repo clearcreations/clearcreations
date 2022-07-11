@@ -1,22 +1,65 @@
 .btn{
     font-family: var(--secondary-font);
     font-size: 1.125rem;
-  }
+}
 
-  .consult-btn{
+.consult-btn{
     display: flex;
     align-items: center;
-  }
+}
 
-  .btn-droplet{
+.btn-droplet{
     padding-right: 5px;
     z-index: 0;
     width: 41px;
     height: 24px;
-  }
+}
   
-  .consult-btn h4{
+.consult-btn h4{
     font-family: var(--secondary-font);
     font-size: 1.25rem;
     font-weight: 400;
+}
+
+.learn-more-btn{
+    display: flex;
+    align-items: center;
+}
+
+.learn-more-btn h4{
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.learn-more-sm{
+  width: 100%;
+}
+
+.learn-more-sm-btn{
+    display: flex;
+    align-items: center;
+}
+
+.learn-more-sm-btn .btn-droplet{
+  transform: scale(.8);
+  display: flex;
+  align-items: center;
+}
+
+.learn-more-sm-btn h5{
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+@media(max-width: 500px){
+  .btn,
+  .consult-btn h4{
+    font-size: .875rem;
   }
+
+  .btn-droplet{
+    transform: scale(.8);
+  }
+}

@@ -1,0 +1,201 @@
+<div className="branding-service service-section">
+                        <div className="service-section-left branding-left">
+                            <div className="branding-left-text">
+                                <h2>Build The Brand People Trust.</h2>
+                                <p className="body-lg">
+                                    Your brand is more than just what you offer. It’s how you present yourself 
+                                    externally to consumers and internally to stakeholders. It’s how you 
+                                    communicate. It’s the story and passion you deliver with every action and word. 
+                                    Let’s build something great together.
+                                </p>
+                            </div>
+                            {/* <LearnMoreBtn/> */}
+                        </div>
+                        <div className="service-section-right branding-right">
+                            <div className="service-cards">
+                                <div className="service-card">
+                                    <FaBullseye className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Brand Strategy</h4>
+                                        <p className="body-sm">
+                                            Due diligence is important in analyzing your competitive environment. 
+                                            Let us align your brand with your goals and set you up for long-term success.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="service-card">
+                                    <FaFingerprint className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Brand Identity</h4>
+                                        <p className="body-sm">
+                                            First impressions are important. All brand assets should align with each other 
+                                            aesthetically. Don’t settle for anything less.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="service-card">
+                                    <FaRocket className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Brand Activation</h4>
+                                        <p className="body-sm">
+                                            The initial release of a new product or brand is pivotal to building lasting brand 
+                                            loyalty. Engage early, engage properly.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="dig-prod-service service-section">
+                        <div className="service-section-left dig-prod-left">
+                            <div className="dig-prod-left-text">
+                                <h2>A Digital Identity Is A Must.</h2>
+                                <p className="body-lg">
+                                    In this digital age, how you present your brand on the web is vital to your success. 
+                                    Believe it or not, good websites, apps, and software have a basic formula to success. 
+                                    We take that formula, combine it with your brand, and we create something amazing.
+                                </p>
+                            </div>
+                            {/* <LearnMoreBtn/> */}
+                        </div>
+                        <div className="service-section-right dig-prod-right">
+                            <div className="service-cards">
+                                <div className="service-card">
+                                    <FaFigma className="figma service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>UI/UX Design</h4>
+                                        <p className="body-sm">
+                                            Great websites and apps are more than aesthetics and flashy animations - 
+                                            it's about performance.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="service-card">
+                                    <FaCode className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Web Development</h4>
+                                        <p className="body-sm">
+                                            We build solutions small and large with experience and performance in mind. 
+                                            Let us help you with your next website, e-commerce, mobile application, or corporate software.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="service-card">
+                                    <FaWhmcs className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Web Maintenance</h4>
+                                        <p className="body-sm">
+                                            Website maintenance is often a time-consuming and daunting task. 
+                                            Leave the busy work to a dedicated team who cares about your brand’s digital presence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="dig-mark-service service-section">
+                        <div className="service-section-left dig-mark-left">
+                            <div className="dig-mark-left-text">
+                                <h2>Engage Consistently. <br /> Stay Relevant.</h2>
+
+                                <p className="body-lg">
+                                    Generating leads, re-marketing, and consistent engagement are all part of sa successful business.
+                                    We offer a variety of digital marketing services to help you target, engage, and retain customers.
+                                    Leave the monotonous tasks to a team that cares. We can also help you automate your marketing.
+                                </p>
+                            </div>
+                            {/* <LearnMoreBtn/> */}
+                        </div>
+                        <div className="service-section-right dig-mark-right">
+                            <div className="service-cards">
+                                <div className="service-card">
+                                    <FaInstagram className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Social Media</h4>
+                                        <p className="body-sm">
+                                            Social media is here to stay so take advantage of it.
+                                            Grow your following, increase likes, shares, and develop a loyal following, and generate more revenue.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="service-card">
+                                    <FaEnvelopeOpenText className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Email Marketing</h4>
+                                        <p className="body-sm">
+                                            With over 4 billion dialy email users it is a no-brainer to utilize this medium of communication.
+                                            Email marketing can help brands generate a loyal brand following and segment content and campaigns
+                                            based on various factors to increase ROI.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="service-card">
+                                    <FaSearch className="service-card-img" />
+                                    <div className="service-card-text">
+                                        <h4>Search Engine Optimization</h4>
+                                        <p className="body-sm">
+                                            Search engine algorithms are continuously changing and ranking on the first page can drive traffic exponentially.
+                                            We keep you in the loop as we drive traffic to your website.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <AllTabs/> */}
+
+
+
+
+                    .service-section-left,
+
+.service-section-right{
+width: 50%;
+}
+
+.service-section-right{
+display: flex;
+justify-content: center;
+}
+
+.branding-left-text,
+.dig-prod-left-text,
+.dig-mark-left-text{
+width: 60%;
+}
+
+.branding-left-text h2,
+.dig-prod-left-text h2,
+.dig-mark-left-text h2{
+margin-bottom: 15px;
+color: var(--sapphire);
+}
+
+.service-cards{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.service-card{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+margin-bottom: 50px;
+}
+
+.service-card h4{
+margin-bottom: 15px;
+}
+
+.service-card-img{
+width: 2rem;
+height: 2rem;
+margin-right: 25px;
+}
+
+.service-card-text p{
+width: 300px;
+}

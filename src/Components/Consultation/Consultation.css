@@ -3,7 +3,7 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 100px 0;
+    padding: 250px 0;
 }
 
 .contact-left{
@@ -17,6 +17,10 @@
 .contact-text{
     width: 100%;
     padding-bottom: 50px;
+}
+
+.contact-text h2{
+    margin-bottom: 15px;
 }
 
 form .form-row{

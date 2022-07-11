@@ -2,7 +2,7 @@ import './Header.css';
 import {Link, NavLink} from 'react-router-dom'
 import NavLogo from '../Images/headerlogo.png'
 import BtnDroplet from '../Images/btndropletsvg.svg'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Header = () => {
 

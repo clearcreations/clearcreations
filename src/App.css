@@ -58,6 +58,7 @@ h5{
   font-weight: 300;
   font-size: 1rem;
   margin-bottom: 5px;
+  color: var(--sapphire);
 }
 
 a{
@@ -68,6 +69,18 @@ a{
 li{
   list-style: none;
   background: none;
+}
+
+.artistic{
+  font-size: 5rem;
+}
+
+.artistic-emphasize{
+  font-size: 5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--sapphire);
+  font-family: var(--primary-font);
 }
 
 .emphasize{
@@ -122,4 +135,73 @@ li{
   font-family: var(--secondary-font);
   font-size: 1.25rem;
   font-weight: 400;
+}
+
+@media(max-width: 768px){
+  h1{
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  
+  h2{
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  h3{
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  h4{
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  h5{
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .emphasize{
+    font-family: var(--primary-font);
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--sapphire);
+  }
+  
+  .nav-link{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .btn{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+  }
+  
+  .body-lg{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .body-reg{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+  }
+  
+  .body-sm{
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 100;
+  }
 }

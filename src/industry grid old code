@@ -1,0 +1,225 @@
+<div className="industries-section">
+  <div className="industries-section-top">
+    <h5>Our Favorites</h5>
+    <h2>
+      Our Favorite Industries Leave A Lasting
+      <span className="emphasize">Impact.</span>
+    </h2>
+    <p className="body-sm">
+      Don't see your industry? We can still provide clarity.
+    </p>
+  </div>
+  <div className="industry-grid">
+    <div className="grid-left">
+      <div className="industry-card food-bev">
+        {/* <img src="{FoodBev}className" ="industry-img food-bev-img" /> */}
+        <div className="food-bev-img"></div>
+        <div className="card-overlay blur">
+          <p className="industry-title body-lg">Food & Beverage</p>
+          <p className="industry-description body-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
+            sit perspiciatis quaerat mollitia quam. Facilis assumenda
+            consequuntur impedit enim voluptate! Nisi, repellat eveniet at modi
+            facere voluptatem veritatis dicta ab!
+          </p>
+        </div>
+      </div>
+      <div className="industry-card non-profit">
+        {/*
+        <img src="{NonProfit}className" ="industry-img non-profit-img" /> */}
+        <div className="non-profit-img"></div>
+        <div className="card-overlay blur">
+          <p className="industry-title body-lg">Non-Profit</p>
+          <p className="industry-description body-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
+            sit perspiciatis quaerat mollitia quam. Facilis assumenda
+            consequuntur impedit enim voluptate! Nisi, repellat eveniet at modi
+            facere voluptatem veritatis dicta ab!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="grid-right">
+      <div className="industry-card cannabis">
+        {/* <img src="{Cannabis}className" ="industry-img cannabis-img" /> */}
+        <div className="cannabis-img"></div>
+        <div className="card-overlay blur">
+          <p className="industry-title body-lg">Cannabis</p>
+          <p className="industry-description body-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
+            sit perspiciatis quaerat mollitia quam. Facilis assumenda
+            consequuntur impedit enim voluptate! Nisi, repellat eveniet at modi
+            facere voluptatem veritatis dicta ab!
+          </p>
+        </div>
+      </div>
+      <div className="industry-card tech">
+        {/* <img src="{Tech}className" ="industry-img tech-img" /> */}
+        <div className="tech-img"></div>
+        <div className="card-overlay blur">
+          <p className="industry-title body-lg">Technology</p>
+          <p className="industry-description body-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem
+            sit perspiciatis quaerat mollitia quam. Facilis assumenda
+            consequuntur impedit enim voluptate! Nisi, repellat eveniet at modi
+            facere voluptatem veritatis dicta ab!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+.industries-section{
+  width: 100%;
+  margin: auto;
+}
+
+.industries-section-top{
+  width: 80%;
+  margin: auto;
+}
+
+.industry-grid{
+  width: 80%;
+  margin: 100px auto 0 auto;
+}
+
+.industry-card{
+  width: 100%;
+  height: 450px ;
+  overflow-y: hidden;
+  margin: 10px;
+  position: relative;
+}
+
+.industry-card .food-bev-img{
+  height: 100%;
+  width: 100%;
+  background-image: url(../Images/foodbev.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.industry-card .non-profit-img{
+  height: 100%;
+  width: 100%;
+  background-image: url(../Images/nonprofit.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+.industry-card .cannabis-img{
+  height: 100%;
+  width: 100%;
+  background-image: url(../Images/cannabis.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.industry-card .tech-img{
+  height: 100%;
+  width: 100%;
+  background-image: url(../Images/technology.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-left,
+.grid-right{
+  display: flex;
+}
+
+.industry-title{
+  font-size: 2rem;
+}
+
+.industry-description{
+  font-size: 1.25rem;
+}
+
+.card-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 14, 14, 0.6);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  overflow: hidden;
+}
+
+.card-overlay p{
+  background: none;
+  padding: 5px 25px;
+  overflow: hidden;
+}
+
+.card-overlay .industry-description{
+  width: 80%;
+  overflow: hidden;
+}
+
+.blur{
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+}
+
+.card-overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+  overflow: hidden;
+}
+
+.card-overlay:hover {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.card-overlay:hover{
+  transform: translateY(0);
+  overflow: hidden;
+}
+
+.card-overlay p:hover{
+  opacity: 1;
+  overflow: hidden;
+}
+
+
+
+.industry-grid,
+.industry-card{
+    width: 100%;
+}
+
+.home-tabs-nav{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tab-content{
+    flex-direction: column;
+}
+
+.tab-left,
+.tab-right{
+    width: 100%;
+}
+
+.tab-left{
+    margin-bottom: 25px;
+}
+
+.tab-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: 100%;
+}

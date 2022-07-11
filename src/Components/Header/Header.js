@@ -20,7 +20,8 @@ const Header = () => {
   };
 
   return (
-    <nav className="nav">
+    <div className="header">
+      <nav className="nav">
       <Link className='nav-logo' to='/'>
         <img src={NavLogo} alt="Home" className="nav-logo-img" />
       </Link>
@@ -41,7 +42,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="nav__item">
-            <Link to="/consultation" className='consult-btn'>
+            <Link to="/consultation" className='menu-consult-btn'>
                 <img src={BtnDroplet}className="btn-droplet" />
                 <h4>Free Consultation</h4>
             </Link>
@@ -53,6 +54,7 @@ const Header = () => {
           <div className="line3"></div>
         </div>
     </nav>
+    </div>
   );
 }
 

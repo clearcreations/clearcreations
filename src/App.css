@@ -78,7 +78,7 @@ li{
 .artistic-emphasize{
   font-size: 5rem;
   font-weight: 600;
-  font-style: italic;
+  /* font-style: italic; */
   color: var(--sapphire);
   font-family: var(--primary-font);
 }
@@ -87,7 +87,7 @@ li{
   font-family: var(--primary-font);
   font-size: 4rem;
   font-weight: 600;
-  font-style: italic;
+  /* font-style: italic; */
   color: var(--sapphire);
 }
 
@@ -173,7 +173,7 @@ li{
     font-family: var(--primary-font);
     font-size: 3.5rem;
     font-weight: 600;
-    font-style: italic;
+    /* font-style: italic; */
     color: var(--sapphire);
   }
   

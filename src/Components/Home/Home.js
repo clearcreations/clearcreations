@@ -18,15 +18,18 @@ import LearnMoreSmBtn from '../Buttons/LearnMoreSmBtn'
 // import homepagedata from '../Data/homepage'
 // import HomeServiceInfo from './HomeServiceInfo'
 import {FaBullseye, FaFingerprint, FaRocket, FaCode, FaWhmcs, FaFigma, FaSearch, FaEnvelopeOpenText, FaInstagram} from "react-icons/fa";
-
+import Diamond from '../Images/diamond shape.png'
 
 const Home = () => {
+
     return(
         <div className="home">
             <div className="container">
                 <div className="hero-section">
                     <div className="hero-left">
+                        <div className="hero-left-text">
                         <h1 className="hero-headline">Create <span className="emphasize">Brands</span> People Crave.</h1>
+                        </div>
                         <p className="hero-body body-lg">
                             We cultivate brands, digital products, and campaigns 
                             that help take your brand to the next level. Book your 
@@ -42,6 +45,58 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+                <marquee className='marquee' direction="right" speed={150}>
+                    <div className="marquee-content">
+                    <div className="slider-content sm">
+                      <p>Brand Identity</p>  
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content bold">
+                        <p>Social Media</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content reg">
+                        <p>Web Development</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content sm">
+                      <p>UI/UX</p>  
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content bold">
+                        <p>Brand Strategy</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content reg">
+                        <p>Email Marketing</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content sm">
+                      <p>Web Maintenance</p>  
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content bold">
+                        <p>Social Media</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content reg">
+                        <p>Brand Activation</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content sm">
+                      <p>Content Marketing</p>  
+                    </div>
+                    <div className="diamond"></div>
+                    <div className="slider-content bold">
+                    <p>Search Engine Optimization</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    <div className="slider-content">
+                    <p>Google Ads</p>
+                    </div>
+                    <div className="slider-content diamond"></div>
+                    </div>
+                </marquee>
             {/* Insert Infinite Scroll */}
             <div className="container">
                 <div className="random-blurb">

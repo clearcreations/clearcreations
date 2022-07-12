@@ -6,7 +6,7 @@ import smImg from '../Images/sm-contact.svg'
 import lgImg from '../Images/lg-contact.svg'
 import LetsChatBtn from '../Buttons/LetsChatBtn'
 
-const Consultation = () => {
+const Consultation = (props) => {
     return(
         <div className="container contact">
             <div className="contact-left">

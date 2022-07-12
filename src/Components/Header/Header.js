@@ -36,11 +36,11 @@ const Header = () => {
               <div className="nav-link">Solutions</div>
             </NavLink>
           </li>
-          <li className="nav__item">
+          {/* <li className="nav__item">
             <NavLink exact="true" to="/casestudies">
               <div className="nav-link">Case Studies</div>
             </NavLink>
-          </li>
+          </li> */}
           <li className="nav__item">
             <Link to="/consultation" className='menu-consult-btn'>
                 <img src={BtnDroplet}className="btn-droplet" />

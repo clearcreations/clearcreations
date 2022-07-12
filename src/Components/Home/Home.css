@@ -397,6 +397,12 @@ marquee{
 
 /* Media Queries */
 /* Home Component */
+@media(max-width: 1500px){
+    .hero-left{
+        padding-top: 125px;
+    }
+}
+
 @media(max-width:1024px){
     .services-section .services-blurb{
         padding-bottom: 4.5rem;
@@ -432,6 +438,10 @@ marquee{
 
     .scroll-indicator{
         padding-top: 100px;
+    }
+
+    marquee{
+        padding-top: 150px;
     }
 
     .blurb{
@@ -470,6 +480,10 @@ marquee{
         padding-top: 150px;
     }
 
+    marquee{
+        padding: 0;
+    }
+
     .image-container{
         padding: 0 0 100px 0;
     }
@@ -485,6 +499,10 @@ marquee{
 
     .industry-card{
         height: 250px;
+    }
+
+    .services-blurb .blurb-right .btn-div{
+        display: none;
     }
 
     .random-blurb,

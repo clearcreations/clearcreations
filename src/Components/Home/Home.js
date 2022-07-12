@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
+import { useParallax } from 'react-scroll-parallax';
 import './Home.css'
 import ConsultationBtn from '../Buttons/ConsultationBtn'
 import LearnMoreBtn from '../Buttons/LearnMoreBtn'
@@ -13,7 +14,7 @@ import Tech from '../Images/technology.jpg'
 import {FaBullseye, FaFingerprint, FaRocket, FaCode, FaWhmcs, FaFigma, FaSearch, FaEnvelopeOpenText, FaInstagram} from "react-icons/fa";
 import Diamond from '../Images/diamond shape.png'
 
-const Home = () => {
+const Home = (props) => {
 
     return(
         <div className="home">
@@ -28,7 +29,9 @@ const Home = () => {
                             that help take your brand to the next level. Book your 
                             free brand audit today and find clarity.
                         </p>
-                        <ConsultationBtn />
+                        <div className="btn-div">
+                            <ConsultationBtn />
+                        </div>
                         <div className="scroll-indicator">
                             <div className="dots"></div>
                         </div>
@@ -38,7 +41,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-                <marquee className='marquee' direction="right" speed={150}>
+                <marquee className='marquee' direction="right" speed={300}>
                     <div className="marquee-content">
                     <div className="slider-content sm">
                       <p>Brand Identity</p>  
@@ -112,7 +115,9 @@ const Home = () => {
                                 We work with creators, the curious, the driven, the rule-breakers, and pioneers, 
                                 to create and bring forth new experiences for consmers across the world.  
                             </p>
-                            <LearnMoreBtn/>
+                            <a href="#about" className="btn-div">
+                                <LearnMoreBtn/>
+                            </a>
                         </div>
                     </div> 
                 </div>
@@ -164,7 +169,9 @@ const Home = () => {
                                     venenatis facilisis consequat pulvinar. Eu ac placerat tellus fermentum in 
                                     libero. Nunc nullam malesuada turpis velit orci. Non non integer faucibus morbi fames.
                                 </p>
-                                <LearnMoreBtn/>
+                                <div className="btn-div">
+                                    <LearnMoreBtn/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +184,9 @@ const Home = () => {
                                 consumers and internally to stakeholders. It’s how you communicate. It’s the story and 
                                 passion you deliver with every action and word. Let’s build something great together.
                             </p>
-                            <LearnMoreSmBtn/>
+                            <div className="btn-div">
+                                <LearnMoreSmBtn/>
+                            </div>
                         </div>
                         <div className="service">
                             <h5 className="service-title">Digital Products</h5>
@@ -187,7 +196,9 @@ const Home = () => {
                                 Believe it or not, good websites, apps, and software have a basic formula to success. 
                                 We take that formula, combine it with your brand, and we create something amazing.
                             </p>
-                            <LearnMoreSmBtn/>
+                            <div className="btn-div">
+                                <LearnMoreSmBtn/>
+                            </div>
                         </div>
                         <div className="service">
                             <h5 className="service-title">Digital Marketing</h5>
@@ -197,7 +208,9 @@ const Home = () => {
                                 business. We offer a variety of digital marketing services to help you target, engage, 
                                 and retain customers. Leave the monotonous tasks to a team that cares. We can also help you automate your marketing.
                             </p>
-                            <LearnMoreSmBtn/>
+                            <div className="btn-div">
+                                <LearnMoreSmBtn/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,7 +218,9 @@ const Home = () => {
             <div className="container">
                 <div className="closing-cta">
                     <h1 className='artistic'>Uncertainty Is A Brand Killer. <br/> <span className="artistic-emphasize">Find Clarity Today.</span></h1>
-                    <ConsultationBtn/>
+                    <div className="btn-div">
+                        <ConsultationBtn/>
+                    </div>
                 </div>
                 {/* Insert Blog Section Here */}
             </div>

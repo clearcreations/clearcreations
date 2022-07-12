@@ -1,0 +1,181 @@
+.about-hero{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 700px;
+    background-image: url(../Images/aboutheader.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.about-hero-text{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    z-index: 999;
+}
+
+.about-top p{
+    width: 40%;
+}
+
+.mission{
+    padding: 200px 0;
+}
+
+.the-brand-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 200px;
+}
+
+.the-brand-blurb{
+    margin-bottom: 0;
+}
+
+.the-brand-blurb .blurb-left{
+    width: 80%;
+}
+
+.brand-info{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.culture-info,
+.roi-info,
+.hire-info{
+    display: flex;
+}
+
+.info-text{
+    width: 75%;
+}
+
+.values-section{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.values-top{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+
+.value-left,
+.value-right{
+    width: 50%;
+}
+
+.value-top-info{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+.value-top-text{
+    width:100%;
+}
+
+.svg{
+    width: 35px;
+    height: 35px;
+    margin-right: 25px;
+}
+
+.values-bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.value-bottom-info{
+    display: flex;
+    align-items: center;
+}
+
+.value-bottom-text{
+    width: 75%;
+}
+
+@media(max-width: 1024px){
+    .the-brand-section{
+        flex-direction: column;
+    }
+
+    .the-brand-blurb .blurb-left {
+        width: 100%;
+    }
+
+    .the-brand-blurb .blurb-left-text{
+        width: 100%;
+    }
+
+    .brand-values-blurb .blurb-left{
+        width: 100%;
+    }
+
+    .brand-info{
+        width: 80%;
+    }
+
+    .brand-svg{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media(max-width: 768px){
+    .about-hero{
+        height: 100vh;
+    }
+
+    .the-brand-blurb{
+        margin-bottom: 100px;
+    }
+
+    .brand-info{
+        width: 100%;
+    }
+
+    .brand-svg{
+        width: 100px;
+        height: 100px;
+    }
+
+    .values-top{
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .value-left,
+    .value-right,
+    .value-top-info{
+        width: 100%;
+    }
+
+    .values-bottom{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+
+    .value-bottom-text{
+        width: 100%;
+    }
+}

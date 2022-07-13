@@ -170,6 +170,18 @@ li{
     margin-bottom: 5px;
   }
 
+  .artistic{
+    font-size: 3.5rem;
+  }
+  
+  .artistic-emphasize{
+    font-size: 3.5rem;
+    font-weight: 600;
+    /* font-style: italic; */
+    color: var(--sapphire);
+    font-family: var(--primary-font);
+  }
+
   .emphasize{
     font-family: var(--primary-font);
     font-size: 3.5rem;
@@ -214,5 +226,17 @@ li{
 
   .nav-link{
     font-size: 2rem;
+  }
+
+  .artistic{
+    font-size: 3rem;
+  }
+  
+  .artistic-emphasize{
+    font-size: 3rem;
+    font-weight: 600;
+    /* font-style: italic; */
+    color: var(--sapphire);
+    font-family: var(--primary-font);
   }
 }

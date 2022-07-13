@@ -11,11 +11,8 @@ import FoodBev from '../Images/foodbev.jpg'
 import NonProfit from '../Images/nonprofit.jpg'
 import Cannabis from '../Images/cannabis.jpg'
 import Tech from '../Images/technology.jpg'
-import {FaBullseye, FaFingerprint, FaRocket, FaCode, FaWhmcs, FaFigma, FaSearch, FaEnvelopeOpenText, FaInstagram} from "react-icons/fa";
-import Diamond from '../Images/diamond shape.png'
 
 const Home = (props) => {
-
     return(
         <div className="home">
             <div className="container">

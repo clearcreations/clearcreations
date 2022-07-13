@@ -145,11 +145,12 @@ marquee{
 }
 
 .random-blurb{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 25% 0;
 }
 
 .blurb{

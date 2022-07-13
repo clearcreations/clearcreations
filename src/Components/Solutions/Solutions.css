@@ -1,0 +1,111 @@
+.solutions-blurb{
+    height: 100%;
+    padding-top: 350px;
+}
+
+.solutions .scroll-indicator{
+    padding-top: 15%;
+    margin-bottom: 150px;
+}
+
+.solutions-section{
+    width: 100%;
+    height: 100%;
+}
+
+.branding-solution,
+.dig-prod-solution{
+    margin-bottom: 15%;
+}
+
+.branding-top,
+.dig-prod-top,
+.dig-mark-top{
+    width: 50%;
+    margin-bottom: 200px;
+}
+
+.branding-text h2,
+.dig-prod-text h2,
+.dig-mark-text h2{
+    margin-bottom: 15px;
+}
+
+.branding-text p,
+.dig-prod-text p,
+.dig-mark-text p{
+    width: 80%;
+}
+
+.branding-services,
+.dig-prod-services,
+.dig-mark-services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+.solution-text{
+    width: 60%;
+}
+
+.overline{
+    width: 15%;
+    height: 3px;
+    background: var(--emerald);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 1024px){
+    .solutions-blurb{
+        padding-top: 250px;
+    }
+
+    .branding-top,
+    .dig-prod-top,
+    .dig-mark-top{
+        width: 100%;
+        margin-bottom: 200px;
+    }
+
+    .solution-text{
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+    .the-brand-blurb{
+        padding-bottom: 0;
+    }
+
+    .branding-services,
+    .dig-prod-services{
+        gap: 25px;
+    }
+
+    .branding-top,
+    .dig-prod-top,
+    .dig-mark-top{
+        margin-bottom: 100px;
+    }
+
+    .dig-mark-services{
+        row-gap: 50px;
+        column-gap: 50px;
+    }
+
+    .solutions .closing-cta{
+        padding: 100px 0;
+    }
+}
+
+@media(max-width: 500px){
+    .branding-services,
+    .dig-prod-services,
+    .dig-mark-services{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}

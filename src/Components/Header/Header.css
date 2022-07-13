@@ -4,7 +4,7 @@
     height: 100px;
     background-color: var(--bg-color);
     position: fixed;
-    z-index: 5;
+    z-index: 1000000000;
 }
 
 .nav {

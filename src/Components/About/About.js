@@ -7,19 +7,14 @@ import ConsultationBtn from '../Buttons/ConsultationBtn'
 const About = (props) => {
 
     return (
-    <div id='about' className="about">
-        <div className="about-hero">
-            <div className="overlay"></div>
-            <div className="about-hero-text">
-                <h1 className="artisitc about-hero-headline">
-                    For Entrepreneurs. By Entrepreneurs.
-                </h1>
-                <h2 className='about-hero-subheadline'>
-                    An agency comprised of digital nomads to be your digital experts.
-                </h2>
-            </div>
-        </div>
+    <div className="about">
         <div className="container">
+            <div className="about-blurb random-blurb">
+                <h1 className='artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
+            </div>
+            <div className="scroll-indicator">
+                <div className="dots"></div>
+            </div>
             <div className="mission">
                 <h5>Our Mission</h5>
                 <h2>

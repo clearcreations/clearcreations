@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import {Link} from 'react-router-dom'
 import { useParallax } from 'react-scroll-parallax';
 import './Home.css'
@@ -11,22 +11,81 @@ import FoodBev from '../Images/foodbev.jpg'
 import NonProfit from '../Images/nonprofit.jpg'
 import Cannabis from '../Images/cannabis.jpg'
 import Tech from '../Images/technology.jpg'
+import {gsap} from 'gsap'
+import { ScrollTrigger } from 'gsap/all';
+
 
 const Home = (props) => {
+    // const hero = useRef();
+
+    // useEffect(() => {
+    //     gsap.to(hero.current, {opacity: 1, y: 0, duration: 1 });
+    // });
+
+    const el = useRef();
+    const q = gsap.utils.selector(el);
+    const herotl = useRef();
+
+    
+    const industryCards = useRef();
+    const ic = gsap.utils.selector(industryCards);
+    const ictl = useRef();
+    
+
+    useEffect(() => {
+
+    herotl.current = gsap.timeline()
+      .to(q(".hero-left-text"), {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power4.inOut"
+      })
+      .to(q(".hero-btn-div"), {
+        opacity: .8,
+        y: 0,
+        duration: 1.5,
+        ease: "power1.inOut"
+      })
+      .to(q(".scroll-indicator"), {
+        opacity: 1,
+        y: 0,
+        duration: 1
+      });
+
+    ictl.current = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.industries-section',
+            pin: true,
+            start: 'top top',
+            end: '+=300',
+            delay: 1.5
+        }
+    })
+        .to(ic ('.industry-card'), {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            y: 0,
+            stagger: 0.33,
+            duration: 1.5,
+            ease: 'power4.inOut'
+    })
+
+     }, []);
+
     return(
         <div className="home">
             <div className="container">
                 <div className="hero-section">
-                    <div className="hero-left">
+                    <div className="hero-left" ref={el}>
                         <div className="hero-left-text">
-                        <h1 className="hero-headline">Create <span className="emphasize">Brands</span> People Crave.</h1>
+                            <h1 className="hero-headline">Create <span className="emphasize">Brands</span> People Crave.</h1>
+                            <p className="hero-body body-lg">
+                                We cultivate brands, digital products, and campaigns 
+                                that help take your brand to the next level. Book your 
+                                free brand audit today and find clarity.
+                            </p>
                         </div>
-                        <p className="hero-body body-lg">
-                            We cultivate brands, digital products, and campaigns 
-                            that help take your brand to the next level. Book your 
-                            free brand audit today and find clarity.
-                        </p>
-                        <div className="btn-div">
+                        <div className="hero-btn-div">
                             <ConsultationBtn />
                         </div>
                         <div className="scroll-indicator">
@@ -127,6 +186,7 @@ const Home = (props) => {
                 <div className="industries-section">
                     <div className="industries-section-top">
                         <div className="blurb-left">
+                            <h5>Industry Speicalizations</h5>
                             <h2>We Love Working In Some Pretty Great Industries</h2>
                             <p className="body-lg">
                                 We love industries that leave a lasting impact on people.
@@ -134,7 +194,7 @@ const Home = (props) => {
                             </p>
                         </div>
                     </div>
-                    <div className="industries-section-bottom">
+                    <div className="industries-section-bottom" ref={industryCards}>
                         <div className="industry-card foodbev">
                             <img src={FoodBev} />
                         </div>

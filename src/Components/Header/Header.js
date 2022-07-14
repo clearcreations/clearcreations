@@ -22,9 +22,9 @@ const Header = () => {
   return (
     <div className="header">
       <nav className="nav">
-      <Link className='nav-logo' to='/'>
-        <img src={NavLogo} alt="Home" className="nav-logo-img" />
-      </Link>
+        <Link className='nav-logo' to='/'>
+          <img src={NavLogo} alt="Home" className="nav-logo-img" />
+        </Link>
         <ul className={active}>
           <li className="nav__item">
             <NavLink exact="true" to="/about">

@@ -72,7 +72,7 @@ li{
 }
 
 .artistic{
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 
 .artistic-emphasize{
@@ -226,6 +226,10 @@ li{
 
   .nav-link{
     font-size: 2rem;
+  }
+
+  .emphasize{
+    font-size: 3rem;
   }
 
   .artistic{

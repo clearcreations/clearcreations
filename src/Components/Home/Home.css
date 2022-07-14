@@ -15,6 +15,11 @@
     padding: 300px 0 0 0;
 }
 
+.hero-left-text{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
 .hero-headline{
     margin-bottom: 25px;
     width: 100%;
@@ -25,12 +30,19 @@
     margin-bottom: 25px;
 }
 
+.hero-btn-div{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
 .scroll-indicator{
     width: 15px;
     padding-top: 20%;
     padding-bottom: 10px;
 	position: relative;
 	opacity: 0.5;
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .scroll-indicator::before,
@@ -218,6 +230,7 @@ marquee{
     position: relative;
     transition: transform 4s ease-in;
     overflow: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .industry-card img{
@@ -361,6 +374,14 @@ marquee{
     padding-bottom: 15rem;
 }
 
+.blurb-right-text{
+    overflow: hidden;
+}
+
+.service{
+    overflow: hidden;
+}
+
 .services-info{
     align-self: flex-end;
     display: grid;
@@ -487,6 +508,8 @@ marquee{
 
     .image-container{
         padding: 0 0 100px 0;
+        width: 80%;
+        margin: auto;
     }
 
     .the-brand-blurb,
@@ -500,10 +523,6 @@ marquee{
 
     .industry-card{
         height: 250px;
-    }
-
-    .services-blurb .blurb-right .btn-div{
-        display: none;
     }
 
     .random-blurb,

@@ -2,6 +2,7 @@
   "name": "clear-creations-website-final",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://clear-creations.github.io",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@react-icons/all-files": "^4.1.0",

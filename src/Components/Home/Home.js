@@ -1,5 +1,5 @@
-import {useEffect, useRef, useState} from 'react'
-import {Link} from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useParallax } from 'react-scroll-parallax';
 import './Home.css'
 import ConsultationBtn from '../Buttons/ConsultationBtn'
@@ -11,7 +11,7 @@ import FoodBev from '../Images/foodbev.jpg'
 import NonProfit from '../Images/nonprofit.jpg'
 import Cannabis from '../Images/cannabis.jpg'
 import Tech from '../Images/technology.jpg'
-import {gsap} from 'gsap'
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all';
 
 
@@ -26,53 +26,53 @@ const Home = (props) => {
     const q = gsap.utils.selector(el);
     const herotl = useRef();
 
-    
+
     const industryCards = useRef();
     const ic = gsap.utils.selector(industryCards);
     const ictl = useRef();
-    
+
 
     useEffect(() => {
 
-    herotl.current = gsap.timeline()
-      .to(q(".hero-left-text"), {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power4.inOut"
-      })
-      .to(q(".hero-btn-div"), {
-        opacity: .8,
-        y: 0,
-        duration: 1.5,
-        ease: "power1.inOut"
-      })
-      .to(q(".scroll-indicator"), {
-        opacity: 1,
-        y: 0,
-        duration: 1
-      });
+        herotl.current = gsap.timeline()
+            .to(q(".hero-left-text"), {
+                opacity: 1,
+                y: 0,
+                duration: 1.5,
+                ease: "power4.inOut"
+            })
+            .to(q(".hero-btn-div"), {
+                opacity: .8,
+                y: 0,
+                duration: 1.5,
+                ease: "power1.inOut"
+            })
+            .to(q(".scroll-indicator"), {
+                opacity: 1,
+                y: 0,
+                duration: 1
+            });
 
-    ictl.current = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.industries-section',
-            pin: true,
-            start: 'top top',
-            end: '+=300',
-            delay: 1.5
-        }
-    })
-        .to(ic ('.industry-card'), {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-            y: 0,
-            stagger: 0.33,
-            duration: 1.5,
-            ease: 'power4.inOut'
-    })
+        ictl.current = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.industries-section',
+                pin: true,
+                start: 'top top',
+                end: '+=300',
+                delay: 1.5
+            }
+        })
+            .to(ic('.industry-card'), {
+                'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+                y: 0,
+                stagger: 0.33,
+                duration: 1.5,
+                ease: 'power4.inOut'
+            })
 
-     }, []);
+    }, []);
 
-    return(
+    return (
         <div className="home">
             <div className="container">
                 <div className="hero-section">
@@ -80,8 +80,8 @@ const Home = (props) => {
                         <div className="hero-left-text">
                             <h1 className="hero-headline">Create <span className="emphasize">Brands</span> People Crave.</h1>
                             <p className="hero-body body-lg">
-                                We cultivate brands, digital products, and campaigns 
-                                that help take your brand to the next level. Book your 
+                                We cultivate brands, digital products, and campaigns
+                                that help take your brand to the next level. Book your
                                 free brand audit today and find clarity.
                             </p>
                         </div>
@@ -97,10 +97,10 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
-                <marquee className='marquee' direction="right" speed={300}>
-                    <div className="marquee-content">
+            <marquee className='marquee' direction="right" speed={300}>
+                <div className="marquee-content">
                     <div className="slider-content sm">
-                      <p>Brand Identity</p>  
+                        <p>Brand Identity</p>
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content bold">
@@ -112,7 +112,7 @@ const Home = (props) => {
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content sm">
-                      <p>UI/UX</p>  
+                        <p>UI/UX</p>
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content bold">
@@ -124,7 +124,7 @@ const Home = (props) => {
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content sm">
-                      <p>Web Maintenance</p>  
+                        <p>Web Maintenance</p>
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content bold">
@@ -136,23 +136,23 @@ const Home = (props) => {
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content sm">
-                      <p>Content Marketing</p>  
+                        <p>Content Marketing</p>
                     </div>
                     <div className="diamond"></div>
                     <div className="slider-content bold">
-                    <p>Search Engine Optimization</p>
+                        <p>Search Engine Optimization</p>
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content">
-                    <p>Google Ads</p>
+                        <p>Google Ads</p>
                     </div>
                     <div className="slider-content diamond"></div>
-                    </div>
-                </marquee>
+                </div>
+            </marquee>
             {/* Insert Infinite Scroll */}
             <div className="container">
                 <div className="random-blurb">
-                    <h1 className='artistic'>Investing In Your Brand Is Not <span className="artistic-emphasize">Expensive.</span> {/*<span className="artistic-emphasize">Uninformed decisions</span> are.*/}</h1> 
+                    <h1 className='artistic'>Investing In Your Brand Is Not <span className="artistic-emphasize">Expensive.</span> {/*<span className="artistic-emphasize">Uninformed decisions</span> are.*/}</h1>
                 </div>
             </div>
             <div className="container">
@@ -168,21 +168,21 @@ const Home = (props) => {
                     <div className="blurb-right">
                         <div className="blurb-right-text">
                             <p className="body-lg">
-                                We work with creators, the curious, the driven, the rule-breakers, and pioneers, 
-                                to create and bring forth new experiences for consmers across the world.  
+                                We work with creators, the curious, the driven, the rule-breakers, and pioneers,
+                                to create and bring forth new experiences for consmers across the world.
                             </p>
                             <a href="#about" className="btn-div">
-                                <LearnMoreBtn/>
+                                <LearnMoreBtn />
                             </a>
                         </div>
-                    </div> 
+                    </div>
                 </div>
-                </div>
-                <div className="image-container">
-                    <img className='image1' src={Image1} />
-                    <img className='image2' src={Image2} />
-                </div>
-                <div className='container'>
+            </div>
+            <div className="image-container">
+                <img className='image1' src={Image1} />
+                <img className='image2' src={Image2} />
+            </div>
+            <div className='container'>
                 <div className="industries-section">
                     <div className="industries-section-top">
                         <div className="blurb-left">
@@ -222,12 +222,12 @@ const Home = (props) => {
                         <div className="blurb-right">
                             <div className="blurb-right-text">
                                 <p className="body-lg">
-                                    Sit in convallis mauris enim. Lorem vulputate consectetur quam id tempor 
-                                    venenatis facilisis consequat pulvinar. Eu ac placerat tellus fermentum in 
+                                    Sit in convallis mauris enim. Lorem vulputate consectetur quam id tempor
+                                    venenatis facilisis consequat pulvinar. Eu ac placerat tellus fermentum in
                                     libero. Nunc nullam malesuada turpis velit orci. Non non integer faucibus morbi fames.
                                 </p>
                                 <div className="btn-div">
-                                    <LearnMoreBtn/>
+                                    <LearnMoreBtn />
                                 </div>
                             </div>
                         </div>
@@ -237,36 +237,36 @@ const Home = (props) => {
                             <h5 className="service-title">Branding</h5>
                             <h3 className="service-headline">Build The Brand People Trust.</h3>
                             <p className="body-reg service-body">
-                                Your brand is more than just what you offer. It’s how you present yourself externally to 
-                                consumers and internally to stakeholders. It’s how you communicate. It’s the story and 
+                                Your brand is more than just what you offer. It’s how you present yourself externally to
+                                consumers and internally to stakeholders. It’s how you communicate. It’s the story and
                                 passion you deliver with every action and word. Let’s build something great together.
                             </p>
                             <div className="btn-div">
-                                <LearnMoreSmBtn/>
+                                <LearnMoreSmBtn />
                             </div>
                         </div>
                         <div className="service">
                             <h5 className="service-title">Digital Products</h5>
                             <h3 className="service-headline">Digital Identities Are A Must.</h3>
                             <p className="body-reg service-body">
-                                In this digital age, how you present your brand on the web is vital to your success. 
-                                Believe it or not, good websites, apps, and software have a basic formula to success. 
+                                In this digital age, how you present your brand on the web is vital to your success.
+                                Believe it or not, good websites, apps, and software have a basic formula to success.
                                 We take that formula, combine it with your brand, and we create something amazing.
                             </p>
                             <div className="btn-div">
-                                <LearnMoreSmBtn/>
+                                <LearnMoreSmBtn />
                             </div>
                         </div>
                         <div className="service">
                             <h5 className="service-title">Digital Marketing</h5>
                             <h3 className="service-headline">Engage Consistently. Stay Relevant.</h3>
                             <p className="body-reg service-body">
-                                Generating leads, re-marketing, and consistent engagement are all part of sa successful 
-                                business. We offer a variety of digital marketing services to help you target, engage, 
+                                Generating leads, re-marketing, and consistent engagement are all part of sa successful
+                                business. We offer a variety of digital marketing services to help you target, engage,
                                 and retain customers. Leave the monotonous tasks to a team that cares. We can also help you automate your marketing.
                             </p>
                             <div className="btn-div">
-                                <LearnMoreSmBtn/>
+                                <LearnMoreSmBtn />
                             </div>
                         </div>
                     </div>
@@ -274,9 +274,9 @@ const Home = (props) => {
             </div>
             <div className="container">
                 <div className="closing-cta">
-                    <h1 className='artistic'>Uncertainty Is A Brand Killer. <br/> <span className="artistic-emphasize">Find Clarity Today.</span></h1>
+                    <h1 className='artistic'>Uncertainty Is A Brand Killer. <br /> <span className="artistic-emphasize">Find Clarity Today.</span></h1>
                     <div className="btn-div">
-                        <ConsultationBtn/>
+                        <ConsultationBtn />
                     </div>
                 </div>
                 {/* Insert Blog Section Here */}

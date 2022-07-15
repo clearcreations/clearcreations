@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/clearcreations/static/css/main.e2147492.css",
-    "main.js": "/clearcreations/static/js/main.6c9601d8.js",
+    "main.css": "/clearcreations/static/css/main.aaaadfa4.css",
+    "main.js": "/clearcreations/static/js/main.67633652.js",
     "static/js/787.94ae2865.chunk.js": "/clearcreations/static/js/787.94ae2865.chunk.js",
     "static/media/image2.png": "/clearcreations/static/media/image2.c54192d453bd617af34a.png",
     "static/media/image1.png": "/clearcreations/static/media/image1.ce775dbbf4d23b158d30.png",
@@ -14,12 +14,12 @@
     "static/media/headerlogo.png": "/clearcreations/static/media/headerlogo.9ac3912a13cab4ae6b58.png",
     "static/media/btndropletsvg.svg": "/clearcreations/static/media/btndropletsvg.a1183e9a5389fd81d9c78bf0b9e85e7d.svg",
     "index.html": "/clearcreations/index.html",
-    "main.e2147492.css.map": "/clearcreations/static/css/main.e2147492.css.map",
-    "main.6c9601d8.js.map": "/clearcreations/static/js/main.6c9601d8.js.map",
+    "main.aaaadfa4.css.map": "/clearcreations/static/css/main.aaaadfa4.css.map",
+    "main.67633652.js.map": "/clearcreations/static/js/main.67633652.js.map",
     "787.94ae2865.chunk.js.map": "/clearcreations/static/js/787.94ae2865.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2147492.css",
-    "static/js/main.6c9601d8.js"
+    "static/css/main.aaaadfa4.css",
+    "static/js/main.67633652.js"
   ]
 }

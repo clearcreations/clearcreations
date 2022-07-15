@@ -11,7 +11,6 @@ import Cannabis from '../Images/cannabis.jpg'
 import Tech from '../Images/technology.jpg'
 import { gsap } from 'gsap'
 import { ScrollTrigger} from 'gsap/all';
-import { SplitText } from 'gsap/all'
 
 
 const Home = (props) => {
@@ -26,13 +25,9 @@ const Home = (props) => {
     const services = useRef();
     const service = gsap.utils.selector(services);
 
-    const randomBlurb = document.getElementsByClassName('.split');
-    const splitText = new SplitText(randomBlurb);
-
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.registerPlugin(SplitText);
 
         herotl.current = gsap.timeline()
             .to(q(".hero-left-text"), {
@@ -96,13 +91,6 @@ const Home = (props) => {
                     // clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
                 })
         });
-
-        gsap.to(splitText.words, {
-            duration:1,
-            y:100,
-            autoAlpha: 0,
-            stagger: 0.05
-        })
 
     }, []);
 

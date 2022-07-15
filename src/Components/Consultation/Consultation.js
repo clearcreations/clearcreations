@@ -50,7 +50,7 @@ const Consultation = (props) => {
                         </div>
                     </div>
                     <div className="submit-btn">
-                        <LetsChatBtn />
+                        {/* <LetsChatBtn /> Need to include a submit button */}
                     </div>
                 </form>
             </div>

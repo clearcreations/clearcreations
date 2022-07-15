@@ -6,7 +6,7 @@ import BtnDroplet from '../Images/btndropletsvg.svg'
 const LearnMoreBtn = () => {
     return(
         <div className="learn-more-sm">
-            <Link to="/" className='learn-more-sm-btn'>
+            <Link to="/solutions" className='learn-more-sm-btn'>
                 <img src={BtnDroplet}className="btn-droplet" />
                 <h5>Learn More</h5>
             </Link>

@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useParallax } from 'react-scroll-parallax';
+import { useEffect, useRef,} from 'react'
 import './Home.css'
 import ConsultationBtn from '../Buttons/ConsultationBtn'
 import LearnMoreBtn from '../Buttons/LearnMoreBtn'
@@ -12,16 +10,11 @@ import NonProfit from '../Images/nonprofit.jpg'
 import Cannabis from '../Images/cannabis.jpg'
 import Tech from '../Images/technology.jpg'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/all';
+import { ScrollTrigger} from 'gsap/all';
+import { SplitText } from 'gsap/all'
 
 
 const Home = (props) => {
-    // const hero = useRef();
-
-    // useEffect(() => {
-    //     gsap.to(hero.current, {opacity: 1, y: 0, duration: 1 });
-    // });
-
     const el = useRef();
     const q = gsap.utils.selector(el);
     const herotl = useRef();
@@ -29,10 +22,17 @@ const Home = (props) => {
 
     const industryCards = useRef();
     const ic = gsap.utils.selector(industryCards);
-    const ictl = useRef();
+
+    const services = useRef();
+    const service = gsap.utils.selector(services);
+
+    const randomBlurb = document.getElementsByClassName('.split');
+    const splitText = new SplitText(randomBlurb);
 
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(SplitText);
 
         herotl.current = gsap.timeline()
             .to(q(".hero-left-text"), {
@@ -53,22 +53,56 @@ const Home = (props) => {
                 duration: 1
             });
 
-        ictl.current = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.industries-section',
-                pin: true,
-                start: 'top top',
-                end: '+=300',
-                delay: 1.5
-            }
+        const cards = ic('.industry-card');
+        gsap.set(cards, {
+            clipPath: 'polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)'
+        });
+        ScrollTrigger.batch(cards, {
+            start: 'top 80%',
+            onEnter: (targets) =>
+                gsap.to(targets, {
+                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                    duration: 1.5,
+                    stagger: 0.2,
+                    overwrite: true
+                }),
+            onLeave: (targets) => 
+                gsap.to(targets, {
+                    clipPath: "polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)",
+                    overwrite: true
+                })
+        });
+
+        const offering = service('.service');
+        gsap.set(offering, {
+            opacity: 0,
+            y: 100
+            // clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
+        });
+        ScrollTrigger.batch(offering, {
+            start: 'top 80%',
+            onEnter: (targets) =>
+                gsap.to(targets, {
+                    opacity: 1,
+                    y: 0,
+                    // clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)',
+                    duration: 1,
+                    stagger: 0.33
+                }),
+            onLeave: (targets) =>
+                gsap.to(targets, {
+                    opacity: 0,
+                    y: 100
+                    // clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
+                })
+        });
+
+        gsap.to(splitText.words, {
+            duration:1,
+            y:100,
+            autoAlpha: 0,
+            stagger: 0.05
         })
-            .to(ic('.industry-card'), {
-                'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-                y: 0,
-                stagger: 0.33,
-                duration: 1.5,
-                ease: 'power4.inOut'
-            })
 
     }, []);
 
@@ -152,7 +186,7 @@ const Home = (props) => {
             {/* Insert Infinite Scroll */}
             <div className="container">
                 <div className="random-blurb">
-                    <h1 className='artistic'>Investing In Your Brand Is Not <span className="artistic-emphasize">Expensive.</span> {/*<span className="artistic-emphasize">Uninformed decisions</span> are.*/}</h1>
+                    <h1 className='split artistic'>Investing In Your Brand Is Not <span className="artistic-emphasize">Expensive.</span> {/*<span className="artistic-emphasize">Uninformed decisions</span> are.*/}</h1>
                 </div>
             </div>
             <div className="container">
@@ -232,7 +266,7 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="services-info">
+                    <div className="services-info" ref={services}>
                         <div className="service">
                             <h5 className="service-title">Branding</h5>
                             <h3 className="service-headline">Build The Brand People Trust.</h3>

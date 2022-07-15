@@ -3,6 +3,7 @@ import {Link, NavLink} from 'react-router-dom'
 import NavLogo from '../Images/headerlogo.png'
 import BtnDroplet from '../Images/btndropletsvg.svg'
 import FooterLogo from '../Images/footerlogo.png'
+import ConsultationBtn from '../Buttons/ConsultationBtn'
 
 const Footer = () => {
   return (
@@ -12,8 +13,9 @@ const Footer = () => {
             <h1>Clarity Consumers Crave.</h1>
         </div>
         <div className="right-column">
-            <img src={BtnDroplet} className="btn-droplet" />
-            <h4>Let's Chat.</h4>
+          <div className="btn-div">
+            <ConsultationBtn />
+          </div>
         </div>
       </div>
       <div className="middle-footer">

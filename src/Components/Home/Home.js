@@ -3,6 +3,7 @@ import './Home.css'
 import ConsultationBtn from '../Buttons/ConsultationBtn'
 import LearnMoreBtn from '../Buttons/LearnMoreBtn'
 import LearnMoreSmBtn from '../Buttons/LearnMoreSmBtn'
+import SolutionsLearnMoreBtn from '../Buttons/SolutionsLearnMoreBtn'
 import Image1 from '../Images/image1.png'
 import Image2 from '../Images/image2.png'
 import FoodBev from '../Images/foodbev.jpg'
@@ -17,7 +18,6 @@ const Home = (props) => {
     const el = useRef();
     const q = gsap.utils.selector(el);
     const herotl = useRef();
-
 
     const industryCards = useRef();
     const ic = gsap.utils.selector(industryCards);
@@ -42,10 +42,11 @@ const Home = (props) => {
                 duration: 1.5,
                 ease: "power1.inOut"
             })
-            .to(q(".scroll-indicator"), {
+            .to(q(".scroll-container"), {
                 opacity: 1,
                 y: 0,
-                duration: 1
+                duration: 1,
+                ease: 'back.inOut(1.7)'
             });
 
         const cards = ic('.industry-card');
@@ -103,15 +104,18 @@ const Home = (props) => {
                             <h1 className="hero-headline">Create <span className="emphasize">Brands</span> People Crave.</h1>
                             <p className="hero-body body-lg">
                                 We cultivate brands, digital products, and campaigns
-                                that help take your brand to the next level. Book your
-                                free brand audit today and find clarity.
+                                that take your organization to the next level. Book your
+                                free brand audit and find clarity.
                             </p>
                         </div>
                         <div className="hero-btn-div">
                             <ConsultationBtn />
                         </div>
-                        <div className="scroll-indicator">
-                            <div className="dots"></div>
+                        <div className="scroll-container">
+                            <p className="body-sm rotate">Scroll</p>
+                            <div className="scroll-indicator">
+                                <div className="dots"></div>
+                            </div>
                         </div>
                     </div>
                     <div className="hero-right">
@@ -210,10 +214,17 @@ const Home = (props) => {
                         <div className="blurb-left">
                             <h5>Industry Speicalizations</h5>
                             <h2>We Love Working In Some Pretty Great Industries</h2>
-                            <p className="body-lg">
-                                We love industries that leave a lasting impact on people.
-                                Don't see yours? Don't worry we're still here to help.
-                            </p>
+                        </div>
+                        <div className="blurb-right">
+                            <div className="blurb-right-text">
+                                <p className="body-lg">
+                                    We love industries that leave a lasting impact on people.
+                                    Don't see yours? Don't worry we're still here to help.
+                                </p>
+                                {/* <div className="btn-div">
+                                    <LearnMoreBtn />
+                                </div> */}
+                            </div>
                         </div>
                     </div>
                     <div className="industries-section-bottom" ref={industryCards}>
@@ -244,12 +255,12 @@ const Home = (props) => {
                         <div className="blurb-right">
                             <div className="blurb-right-text">
                                 <p className="body-lg">
-                                    Sit in convallis mauris enim. Lorem vulputate consectetur quam id tempor
-                                    venenatis facilisis consequat pulvinar. Eu ac placerat tellus fermentum in
-                                    libero. Nunc nullam malesuada turpis velit orci. Non non integer faucibus morbi fames.
+                                    Whether its branding, digital design, or digital marketing, we’ve got you covered. 
+                                    We offer a suite of solutions for your brand’s needs. Partner with a team that will 
+                                    treat your brand as more than just another client.
                                 </p>
                                 <div className="btn-div">
-                                    <LearnMoreBtn />
+                                    <SolutionsLearnMoreBtn />
                                 </div>
                             </div>
                         </div>
@@ -263,9 +274,11 @@ const Home = (props) => {
                                 consumers and internally to stakeholders. It’s how you communicate. It’s the story and
                                 passion you deliver with every action and word. Let’s build something great together.
                             </p>
-                            <div className="btn-div">
-                                <LearnMoreSmBtn />
-                            </div>
+                            <a href="#brand-solution">
+                                <div className="btn-div">
+                                    <LearnMoreSmBtn />
+                                </div>
+                            </a>
                         </div>
                         <div className="service">
                             <h5 className="service-title">Digital Products</h5>

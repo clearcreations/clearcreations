@@ -13,9 +13,6 @@ const Solutions = () => {
             <div className="solutions-blurb random-blurb">
                 <h1 className='artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
             </div>
-            <div className="scroll-indicator">
-                <div className="dots"></div>
-            </div>
             <div className="the-brand-section">
                 <div className="blurb the-brand-blurb">
                     <div className="blurb-left">
@@ -73,7 +70,7 @@ const Solutions = () => {
                 </div>
             </div>
             <div className="solutions-section">
-                <div className="solution branding-solution">
+                <div id="brand-solution" className="solution branding-solution">
                     <div className="left branding-top">
                         <div className="branding-text">
                             <h5>Branding</h5>
@@ -110,7 +107,7 @@ const Solutions = () => {
                         </div>
                     </div>
                 </div>
-                <div className="solution dig-prod-solution">
+                <div id="dig-prod-solution" className="solution dig-prod-solution">
                     <div className="left dig-prod-top">
                         <div className="dig-prod-text">
                             <h5>Digital Products</h5>
@@ -147,7 +144,7 @@ const Solutions = () => {
                         </div>
                     </div>
                 </div>
-                <div className="solution dig-mark-solution">
+                <div id="dig-mark-solution" className="solution dig-mark-solution">
                     <div className="left dig-mark-top">
                         <div className="dig-mark-text">
                             <h5>Digital Marketings</h5>

@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 import {FaHeart, FaChartLine, FaUserFriends, FaRegCircle, FaSearch, FaLightbulb, FaRegQuestionCircle, FaRedoAlt, FaCircle, FaQuestionCircle} from 'react-icons/fa'
 import ConsultationBtn from '../Buttons/ConsultationBtn'
-
+import 'animate.css'
 
 const About = (props) => {
 
@@ -10,10 +10,7 @@ const About = (props) => {
     <div className="about">
         <div className="container">
             <div className="about-blurb random-blurb">
-                <h1 className='artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
-            </div>
-            <div className="scroll-indicator">
-                <div className="dots"></div>
+                <h1 className='animate__animated animate__fadeInLeft artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
             </div>
             <div className="mission">
                 <h5>Our Mission</h5>

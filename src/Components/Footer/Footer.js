@@ -35,19 +35,25 @@ const Footer = () => {
             <div className="services-column">
                 <p className="body-reg">Services</p>
                 <div className="footer-services">
-                    <a href="/" className="body-sm">Branding</a>
-                    <a href="/" className="body-sm">Digital Products</a>
-                    <a href="/" className="body-sm">Digital Marketing</a>
+                <NavLink exact="true" to="/solutions">
+                  <div className="nav-link body-sm">Branding</div>
+                </NavLink>
+                <NavLink exact="true" to="/solutions">
+                  <div className="nav-link body-sm">Digital Products</div>
+                </NavLink>
+                <NavLink exact="true" to="/solutions">
+                  <div className="nav-link body-sm">Digital Marketing</div>
+                </NavLink>
                 </div>
             </div>
         </div>
       </div>
       <div className="bottom-footer">
         <div className="social-links">
-            <a href="/" className="body-sm">LinkedIn</a>
+            {/* <a href="/" className="body-sm">LinkedIn</a>
             <a href="/" className="body-sm">Instagram</a>
             <a href="/" className="body-sm">Facebook</a>
-            <a href="/" className="body-sm">Twitter</a>
+            <a href="/" className="body-sm">Twitter</a> */}
         </div>
         <div className="legal">
             <p className="body-sm">2022 &copy; Clear Creations LLC All Rights Reserved</p>

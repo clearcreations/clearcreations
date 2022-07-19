@@ -404,10 +404,6 @@ marquee{
     gap: 50px;
 }
 
-.service-title{
-    color: var(--sapphire);
-}
-
 .service-headline{
     margin-bottom: 15px;
     font-weight: bold;

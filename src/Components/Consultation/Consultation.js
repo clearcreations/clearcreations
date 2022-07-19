@@ -4,7 +4,9 @@ import emailjs from '@emailjs/browser'
 import '../Consultation/Consultation.css'
 import smImg from '../Images/sm-contact.svg'
 import lgImg from '../Images/lg-contact.svg'
-import LetsChatBtn from '../Buttons/LetsChatBtn'
+import FormSubmitBtn from '../Buttons/FormSubmitBtn'
+import { gsap } from 'gsap'
+import { ScrollTrigger} from 'gsap/all';
 
 const Consultation = (props) => {
     return(
@@ -13,7 +15,7 @@ const Consultation = (props) => {
                 <div className="contact-text">
                     <h2>Ready For Clarity?</h2>
                     <p className="body-lg">
-                        Whether you know where to start or are completely clueless, we are here to help. 
+                        Whether you know where to start or are completely clueless, we're here to help. 
                         Get in touch with us about your new project below or send us a quick message.
                     </p>
                 </div>

@@ -1,20 +1,75 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Solutions.css'
 import {FaHeart, FaChartLine, FaUserFriends} from 'react-icons/fa'
 import ConsultationBtn from '../Buttons/ConsultationBtn'
+import { gsap } from 'gsap'
+import { ScrollTrigger} from 'gsap/all';
+import 'animate.css'
 
 const Solutions = () => {
+
+    const brandThings = useRef();
+    const brandThing = gsap.utils.selector(brandThings);
+
+    const services = useRef();
+    const serviceItem = gsap.utils.selector(services)
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const brandInfo = brandThing('.info');
+        gsap.set(brandInfo, {
+            clipPath: 'polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)'
+        });
+        ScrollTrigger.batch(brandInfo, {
+            start: 'top 80%',
+            onEnter: (targets) =>
+                gsap.to(targets, {
+                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                    duration: 1.5,
+                    stagger: 0.2,
+                    overwrite: true
+                }),
+            onLeave: (targets) => 
+                gsap.to(targets, {
+                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                    overwrite: true
+                })
+        });
+
+        const serviceType = serviceItem('.solution-text');
+        gsap.set(serviceType, {
+            clipPath: 'polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)'
+        });
+        ScrollTrigger.batch(serviceType, {
+            start: 'top 80%',
+            onEnter: (targets) =>
+                gsap.to(targets, {
+                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                    duration: 1.5,
+                    stagger: 0.2,
+                    overwrite: true
+                }),
+            onLeave: (targets) => 
+                gsap.to(targets, {
+                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+                    overwrite: true
+                })
+        });
+
+    }, []);
+
   return (
     <div className="solutions">
         <div className="solutions-hero">
             
         </div>
         <div className="container">
-            <div className="solutions-blurb random-blurb">
-                <h1 className='artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
+            <div className="solutions-hero-blurb random-blurb">
+                <h1 className='animate__animated animate__fadeInLeft artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
             </div>
             <div className="the-brand-section">
-                <div className="blurb the-brand-blurb">
+                <div className="the-brand-blurb">
                     <div className="blurb-left">
                         <div className="blurb-left-text">
                             <h5>The Brand</h5>
@@ -29,8 +84,8 @@ const Solutions = () => {
                     </div>
                 </div>
                 <div className="the-brand-info">
-                    <div className="brand-info">
-                        <div className="culture-info">
+                    <div className="brand-info" ref={brandThings}>
+                        <div className="info culture-info">
                             <div className="info-icon">
                                 <FaHeart className='svg' />
                             </div>
@@ -42,7 +97,7 @@ const Solutions = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="roi-info">
+                        <div className="info roi-info">
                             <div className="info-icon">
                                 <FaChartLine className='svg' />
                             </div>
@@ -54,7 +109,7 @@ const Solutions = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="hire-info">
+                        <div className="info hire-info">
                             <div className="info-icon">
                                 <FaUserFriends className='svg' />
                             </div>
@@ -69,7 +124,7 @@ const Solutions = () => {
                     </div>
                 </div>
             </div>
-            <div className="solutions-section">
+            <div className="solutions-section" ref={services}>
                 <div id="brand-solution" className="solution branding-solution">
                     <div className="left branding-top">
                         <div className="branding-text">
@@ -87,21 +142,21 @@ const Solutions = () => {
                                 <div className="overline"></div>
                                 <h4>Brand Strategy</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    A strong strategy inspires growth, clarity in all endeavors and decision making, and most importantly establishing a strong consumer-brand relationship.
                                 </p>
                             </div>
                             <div className="solution-text brand-identity">
                                 <div className="overline"></div>
                                 <h4>Brand Identity</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    The visuals of your brand are what consumers think of first, it’s imperative they align with your brand’s values.
                                 </p>
                             </div>
                             <div className="solution-text brand-activation">
                                 <div className="overline"></div>
                                 <h4>Brand Activation</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    We help you develop an experience, digital or physical, that brings your brand to the forefront of your target audience. 
                                 </p>
                             </div>
                         </div>
@@ -124,21 +179,21 @@ const Solutions = () => {
                                 <div className="overline"></div>
                                 <h4>UI/UX Design</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    The greater the user experience, the more users engage and move closer to purchase. UI/UX is about understanding the target audience and providing a seamless and fluid experience. 
                                 </p>
                             </div>
                             <div className="solution-text web-mobile-dev">
                                 <div className="overline"></div>
                                 <h4>Web/Mobile Development</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    We build solutions small and large with experience and performance in mind. Let us help you with your next website, e-commerce, mobile application, or corporate software.
                                 </p>
                             </div>
                             <div className="solution-text web-maintenance">
                                 <div className="overline"></div>
                                 <h4>Web Maintenance</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    Leave the busy work to a dedicated team who cares about your brand’s digital presence. A well-maintained website encourages traffic growth and boosts search engine rankings.
                                 </p>
                             </div>
                         </div>
@@ -161,42 +216,42 @@ const Solutions = () => {
                                 <div className="overline"></div>
                                 <h4>Content Marketing</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    Delivering content consumers crave increases their knowledge, keeps them interested, and entices them to purchase more frequently.
                                 </p>
                             </div>
                             <div className="solution-text email-marketing">
                                 <div className="overline"></div>
                                 <h4>Email Marketing</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    Email marketing can help brands generate a loyal brand following and segment content and campaigns based on various factors to increase ROI.
                                 </p>
                             </div>
                             <div className="solution-text social-media">
                                 <div className="overline"></div>
                                 <h4>Social Media</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    More often than not, your ideal consumer utilizes one of the many social media platforms - target these individuals through sound strategy and quality content.
                                 </p>
                             </div>
                             <div className="solution-text seo">
                                 <div className="overline"></div>
                                 <h4>Search Engine Optimization</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    Search engine algorithms are continuously changing and ranking on the first page can drive traffic exponentially.
                                 </p>
                             </div>
                             <div className="solution-text marketing-automation">
                                 <div className="overline"></div>
                                 <h4>Marketing Automation</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    By analyzing the consumer journey, identifying touchpoints, and integrating automated processes allow you to properly nurture leads, generate sales, and increase profit.
                                 </p>
                             </div>
                             <div className="solution-text google">
                                 <div className="overline"></div>
-                                <h4>Google Ads</h4>
+                                <h4>Pay-Per-Click</h4>
                                 <p className='body-sm'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit!
+                                    PPC campaigns on any platform require an upfront investment, avoid the guess work wasting ad dollars and find clarity in us.
                                 </p>
                             </div>
                         </div>

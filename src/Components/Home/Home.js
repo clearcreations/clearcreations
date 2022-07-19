@@ -12,6 +12,7 @@ import Cannabis from '../Images/cannabis.jpg'
 import Tech from '../Images/technology.jpg'
 import { gsap } from 'gsap'
 import { ScrollTrigger} from 'gsap/all';
+import 'animate.css'
 
 
 const Home = (props) => {
@@ -24,7 +25,9 @@ const Home = (props) => {
 
     const services = useRef();
     const service = gsap.utils.selector(services);
-
+    
+    const topService = useRef();
+    const blurb = gsap.utils.selector(topService)
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -64,11 +67,11 @@ const Home = (props) => {
                 }),
             onLeave: (targets) => 
                 gsap.to(targets, {
-                    clipPath: "polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)",
+                    clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
                     overwrite: true
                 })
         });
-
+        
         const offering = service('.service');
         gsap.set(offering, {
             opacity: 0,
@@ -87,8 +90,32 @@ const Home = (props) => {
                 }),
             onLeave: (targets) =>
                 gsap.to(targets, {
-                    opacity: 0,
-                    y: 100
+                    opacity: 1,
+                    y: 0
+                    // clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
+                })
+        });
+
+        const offeringTop = blurb('.blurb-animate');
+        gsap.set(offeringTop, {
+            opacity: 0,
+            y: 100
+            // clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
+        });
+        ScrollTrigger.batch(offeringTop, {
+            start: 'top 80%',
+            onEnter: (targets) =>
+                gsap.to(targets, {
+                    opacity: 1,
+                    y: 0,
+                    // clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)',
+                    duration: 1,
+                    stagger: 0.33
+                }),
+            onLeave: (targets) =>
+                gsap.to(targets, {
+                    opacity: 1,
+                    y: 0
                     // clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
                 })
         });
@@ -170,7 +197,7 @@ const Home = (props) => {
                     </div>
                     <div className="slider-content diamond"></div>
                     <div className="slider-content">
-                        <p>Google Ads</p>
+                        <p>Pay-Per-Click</p>
                     </div>
                     <div className="slider-content diamond"></div>
                 </div>
@@ -195,7 +222,7 @@ const Home = (props) => {
                         <div className="blurb-right-text">
                             <p className="body-lg">
                                 We work with creators, the curious, the driven, the rule-breakers, and pioneers,
-                                to create and bring forth new experiences for consmers across the world.
+                                to create and bring forth new experiences for consumers across the world.
                             </p>
                             <a href="#about" className="btn-div">
                                 <LearnMoreBtn />
@@ -213,13 +240,13 @@ const Home = (props) => {
                     <div className="industries-section-top">
                         <div className="blurb-left">
                             <h5>Industry Speicalizations</h5>
-                            <h2>We Love Working In Some Pretty Great Industries</h2>
+                            <h2>We Love Working With Brands <br/> That Leave A Lasting Impact.</h2>
                         </div>
                         <div className="blurb-right">
                             <div className="blurb-right-text">
                                 <p className="body-lg">
-                                    We love industries that leave a lasting impact on people.
-                                    Don't see yours? Don't worry we're still here to help.
+                                    Whether your brand provides substenance or operations optimizinng software, we're excited to help you
+                                    serve your consumers. Don't see yours? Don't worry we're still here to help.
                                 </p>
                                 {/* <div className="btn-div">
                                     <LearnMoreBtn />
@@ -243,8 +270,8 @@ const Home = (props) => {
                     </div>
                 </div>
                 <div className="services-section">
-                    <div className="blurb services-blurb">
-                        <div className="blurb-left">
+                    <div className="blurb services-blurb" ref={topService}>
+                        <div className="blurb-animate blurb-left">
                             <div className="blurb-left-text">
                                 <h5>What We Do</h5>
                                 <h2>
@@ -252,12 +279,12 @@ const Home = (props) => {
                                 </h2>
                             </div>
                         </div>
-                        <div className="blurb-right">
+                        <div className="blurb-animate blurb-right">
                             <div className="blurb-right-text">
                                 <p className="body-lg">
                                     Whether its branding, digital design, or digital marketing, we’ve got you covered. 
                                     We offer a suite of solutions for your brand’s needs. Partner with a team that will 
-                                    treat your brand as more than just another client.
+                                    treat you as more than just another client.
                                 </p>
                                 <div className="btn-div">
                                     <SolutionsLearnMoreBtn />
@@ -296,7 +323,7 @@ const Home = (props) => {
                             <h5 className="service-title">Digital Marketing</h5>
                             <h3 className="service-headline">Engage Consistently. Stay Relevant.</h3>
                             <p className="body-reg service-body">
-                                Generating leads, re-marketing, and consistent engagement are all part of sa successful
+                                Generating leads, re-marketing, and consistent engagement are all part of a successful
                                 business. We offer a variety of digital marketing services to help you target, engage,
                                 and retain customers. Leave the monotonous tasks to a team that cares. We can also help you automate your marketing.
                             </p>

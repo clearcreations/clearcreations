@@ -66,7 +66,7 @@ const Solutions = () => {
         </div>
         <div className="container">
             <div className="solutions-hero-blurb random-blurb">
-                <h1 className='animate__animated animate__fadeInLeft artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> Our Processes Are Bespoke To Your Brand.</h1> 
+                <h1 className='animate__animated animate__fadeInLeft artistic'>Avoid <span className="artistic-emphasize">Cookie-Cutter Templates.</span> <br /> Our Processes Are Bespoke To Your Brand.</h1> 
             </div>
             <div className="the-brand-section">
                 <div className="the-brand-blurb">
@@ -74,11 +74,11 @@ const Solutions = () => {
                         <div className="blurb-left-text">
                             <h5>The Brand</h5>
                             <h2>
-                                Disrupting Industries, One Brand At A Time.
+                                Disrupting Industries, <br /> One Brand At A Time.
                             </h2>
                             <p className="body-lg">
                                 Your brand is your lifeline, it should be treated as such. We look at a brand as more than a logo 
-                                and a color pallete. Let us help you cultivate a culture and meaning behind your brand that consumers crave.
+                                and a color pallette. Let us help you cultivate a culture and meaning behind your brand that consumers crave.
                             </p>
                         </div>
                     </div>
@@ -202,7 +202,7 @@ const Solutions = () => {
                 <div id="dig-mark-solution" className="solution dig-mark-solution">
                     <div className="left dig-mark-top">
                         <div className="dig-mark-text">
-                            <h5>Digital Marketings</h5>
+                            <h5>Digital Marketing</h5>
                             <h2>Engage Consistently. Stay Relevant.</h2>
                             <p className="body-lg">
                                 Generating leads, re-marketing, and consistent engagement are all part of sa successful business. 
@@ -244,7 +244,7 @@ const Solutions = () => {
                                 <div className="overline"></div>
                                 <h4>Marketing Automation</h4>
                                 <p className='body-sm'>
-                                    By analyzing the consumer journey, identifying touchpoints, and integrating automated processes allow you to properly nurture leads, generate sales, and increase profit.
+                                    By analyzing the consumer journey, identifying touch points, and integrating automated processes allow you to properly nurture leads, generate sales, and increase profit.
                                 </p>
                             </div>
                             <div className="solution-text google">

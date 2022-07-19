@@ -78,11 +78,11 @@ const About = (props) => {
                         <div className="blurb-left-text">
                             <h5>The Brand</h5>
                             <h2>
-                                Disrupting Industries, One Brand At A Time.
+                                Disrupting Industries, <br /> One Brand At A Time.
                             </h2>
                             <p className="body-lg">
                                 Your brand is your lifeline, it should be treated as such. We look at a brand as more than a logo 
-                                and a color pallete. Let us help you cultivate a culture and meaning behind your brand that consumers crave.
+                                and a color pallette. Let us help you cultivate a culture and meaning behind your brand that consumers crave.
                             </p>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ const About = (props) => {
                                 <div className="value-bottom-text">
                                 <h4>Curiosity</h4>
                                 <p className="body-description body-sm">
-                                    What if? What if we do what hasn’t been done? What if we never asked what if? Curiousty makes the world go round. What ifs are meant to take you further.
+                                    What if? What if we do what hasn’t been done? What if we never asked what if? Curiosity makes the world go round. What ifs are meant to take you further.
                                 </p>
                                 </div>
                             </div>

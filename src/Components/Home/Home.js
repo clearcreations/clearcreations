@@ -239,13 +239,13 @@ const Home = (props) => {
                 <div className="industries-section">
                     <div className="industries-section-top">
                         <div className="blurb-left">
-                            <h5>Industry Speicalizations</h5>
+                            <h5>Industry Specializations</h5>
                             <h2>We Love Working With Brands <br/> That Leave A Lasting Impact.</h2>
                         </div>
                         <div className="blurb-right">
                             <div className="blurb-right-text">
                                 <p className="body-lg">
-                                    Whether your brand provides substenance or operations optimizinng software, we're excited to help you
+                                    Whether your brand provides sustenance or operations optimizing software, we're excited to help you
                                     serve your consumers. Don't see yours? Don't worry we're still here to help.
                                 </p>
                                 {/* <div className="btn-div">

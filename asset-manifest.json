@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/clearcreations/static/css/main.96280640.css",
-    "main.js": "/clearcreations/static/js/main.2f88ea12.js",
-    "static/js/787.94ae2865.chunk.js": "/clearcreations/static/js/787.94ae2865.chunk.js",
-    "static/media/image2.png": "/clearcreations/static/media/image2.c54192d453bd617af34a.png",
-    "static/media/image1.png": "/clearcreations/static/media/image1.ce775dbbf4d23b158d30.png",
-    "static/media/foodbev.jpg": "/clearcreations/static/media/foodbev.c4f58614d5b44af5ce85.jpg",
-    "static/media/technology.jpg": "/clearcreations/static/media/technology.2148c404a068a2110247.jpg",
-    "static/media/nonprofit.jpg": "/clearcreations/static/media/nonprofit.d1d75a8e9100efd03358.jpg",
-    "static/media/lg-contact.svg": "/clearcreations/static/media/lg-contact.c1d0593121e643d56efedef047bce88a.svg",
-    "static/media/cannabis.jpg": "/clearcreations/static/media/cannabis.c941160a1160fb1963a3.jpg",
-    "static/media/sm-contact.svg": "/clearcreations/static/media/sm-contact.4b488643ccb09b9d41dbc1013f525598.svg",
-    "static/media/headerlogo.png": "/clearcreations/static/media/headerlogo.9ac3912a13cab4ae6b58.png",
-    "static/media/btndropletsvg.svg": "/clearcreations/static/media/btndropletsvg.a1183e9a5389fd81d9c78bf0b9e85e7d.svg",
-    "index.html": "/clearcreations/index.html",
-    "main.96280640.css.map": "/clearcreations/static/css/main.96280640.css.map",
-    "main.2f88ea12.js.map": "/clearcreations/static/js/main.2f88ea12.js.map",
-    "787.94ae2865.chunk.js.map": "/clearcreations/static/js/787.94ae2865.chunk.js.map"
+    "main.css": "/static/css/main.96280640.css",
+    "main.js": "/static/js/main.4e236ab9.js",
+    "static/js/787.94ae2865.chunk.js": "/static/js/787.94ae2865.chunk.js",
+    "static/media/image2.png": "/static/media/image2.c54192d453bd617af34a.png",
+    "static/media/image1.png": "/static/media/image1.ce775dbbf4d23b158d30.png",
+    "static/media/foodbev.jpg": "/static/media/foodbev.c4f58614d5b44af5ce85.jpg",
+    "static/media/technology.jpg": "/static/media/technology.2148c404a068a2110247.jpg",
+    "static/media/nonprofit.jpg": "/static/media/nonprofit.d1d75a8e9100efd03358.jpg",
+    "static/media/lg-contact.svg": "/static/media/lg-contact.c1d0593121e643d56efedef047bce88a.svg",
+    "static/media/cannabis.jpg": "/static/media/cannabis.c941160a1160fb1963a3.jpg",
+    "static/media/sm-contact.svg": "/static/media/sm-contact.4b488643ccb09b9d41dbc1013f525598.svg",
+    "static/media/headerlogo.png": "/static/media/headerlogo.9ac3912a13cab4ae6b58.png",
+    "static/media/btndropletsvg.svg": "/static/media/btndropletsvg.a1183e9a5389fd81d9c78bf0b9e85e7d.svg",
+    "index.html": "/index.html",
+    "main.96280640.css.map": "/static/css/main.96280640.css.map",
+    "main.4e236ab9.js.map": "/static/js/main.4e236ab9.js.map",
+    "787.94ae2865.chunk.js.map": "/static/js/787.94ae2865.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96280640.css",
-    "static/js/main.2f88ea12.js"
+    "static/js/main.4e236ab9.js"
   ]
 }

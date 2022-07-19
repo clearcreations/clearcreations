@@ -111,12 +111,21 @@ input:-webkit-autofill{
     -webkit-text-fill-color: #F8F8FF !important;
 }
 
-.submit-btn .input-data{
-    overflow: hidden;
+input[type=submit]{
+    background: none;
+    font-size: 1rem;
+    width: 150px;
     height: 45px;
-    width: 25%;
-    border-bottom: none;
-    /* border: 2px solid var(--text-color) !important */
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+input[type=submit]:hover{
+    background: var(--sapphire);
+    color: var(--text-color);
+    cursor: pointer;
+    border: none;
 }
 
 .lg-img{

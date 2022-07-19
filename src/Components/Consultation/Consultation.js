@@ -1,14 +1,31 @@
-import {useEffect, useState, useRef} from 'react'
-import {Link} from 'react-router-dom'
+import {useRef} from 'react'
 import emailjs from '@emailjs/browser'
 import '../Consultation/Consultation.css'
 import smImg from '../Images/sm-contact.svg'
 import lgImg from '../Images/lg-contact.svg'
-import FormSubmitBtn from '../Buttons/FormSubmitBtn'
-import { gsap } from 'gsap'
-import { ScrollTrigger} from 'gsap/all';
+// import FormSubmitBtn from '../Buttons/FormSubmitBtn'
+// import { gsap } from 'gsap'
+// import { ScrollTrigger} from 'gsap/all';
 
 const Consultation = (props) => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('clearcreations', 'contactForm', form.current, '3VoYYe1WsgxtLt4Jl')
+        .then(
+            () => {
+              alert('Message successfully sent!')
+              window.location.reload(false)
+            },
+            () => {
+              alert('Failed to send the message, please try again')
+            }
+          )
+    }
+    
     return(
         <div className="container contact">
             <div className="contact-left">
@@ -19,7 +36,7 @@ const Consultation = (props) => {
                         Get in touch with us about your new project below or send us a quick message.
                     </p>
                 </div>
-                <form action="#">
+                <form ref={form} onSubmit={sendEmail}>
                     <div className="form-row">
                         <div className="input-data">
                             <input type="text" name='name' id='name' required />
@@ -51,9 +68,10 @@ const Consultation = (props) => {
                             <label htmlFor="message">Message</label>
                         </div>
                     </div>
-                    <div className="submit-btn">
-                        {/* <LetsChatBtn /> Need to include a submit button */}
-                    </div>
+                    {/* <div className="submit-btn">
+                        <FormSubmitBtn />
+                    </div> */}
+                    <input className='submit' type="submit" value="Send" />
                 </form>
             </div>
             <div className="contact-right">
@@ -63,7 +81,7 @@ const Consultation = (props) => {
                 <div className="sm-circle"></div> */}
             </div>
         </div>
-    )
-}
+        )
+    }
 
 export default Consultation;

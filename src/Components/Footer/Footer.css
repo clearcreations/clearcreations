@@ -52,7 +52,7 @@
 }
 
 .services-column{
-    padding-left: 100px;
+    margin-left: 25px;
 }
 
 .footer-services{
@@ -104,5 +104,9 @@
 
     .bottom-footer .legal{
         display: none;
+    }
+
+    .contact-column{
+        width: 100%;
     }
 }

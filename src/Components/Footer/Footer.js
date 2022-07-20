@@ -3,7 +3,7 @@ import {Link, NavLink} from 'react-router-dom'
 import NavLogo from '../Images/headerlogo.png'
 import BtnDroplet from '../Images/btndropletsvg.svg'
 import FooterLogo from '../Images/footerlogo.png'
-import ConsultationBtn from '../Buttons/ConsultationBtn'
+import LetsChatBtn from '../Buttons/LetsChatBtn'
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="right-column">
           <div className="btn-div">
-            <ConsultationBtn />
+            <LetsChatBtn />
           </div>
         </div>
       </div>
@@ -36,13 +36,13 @@ const Footer = () => {
                 <p className="body-reg">Services</p>
                 <div className="footer-services">
                 <NavLink exact="true" to="/solutions">
-                  <div className="nav-link body-sm">Branding</div>
+                  <p className="body-sm">Branding</p>
                 </NavLink>
                 <NavLink exact="true" to="/solutions">
-                  <div className="nav-link body-sm">Digital Products</div>
+                  <p className="body-sm">Digital Products</p>
                 </NavLink>
                 <NavLink exact="true" to="/solutions">
-                  <div className="nav-link body-sm">Digital Marketing</div>
+                  <p className="body-sm">Digital Marketing</p>
                 </NavLink>
                 </div>
             </div>

@@ -41,7 +41,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     opacity: 0;
     transform: translateY(100px);
 }
@@ -458,6 +457,10 @@ marquee{
 }
 
 @media(max-width: 768px){
+    div{
+        overflow: hidden;
+    }
+
     .hero-section{
         flex-direction: column-reverse;
         height: 100%;
@@ -492,11 +495,15 @@ marquee{
     .blurb-left{
         margin-bottom: 15px;
     }
+
+    .industries-section-top{
+        flex-direction: column;
+    }
 }
 
 @media(max-width: 500px){
     .hero-section{
-        margin: 250px 0 100px 0;
+        margin: 200px 0 100px 0;
         height: 100%;
     }
 
@@ -510,7 +517,7 @@ marquee{
     }
 
     .scroll-indicator{
-        padding-top: 150px;
+        padding-top: 25px;
     }
 
     marquee{

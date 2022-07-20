@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser'
 import '../Consultation/Consultation.css'
 import smImg from '../Images/sm-contact.svg'
 import lgImg from '../Images/lg-contact.svg'
+import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
 // import FormSubmitBtn from '../Buttons/FormSubmitBtn'
 // import { gsap } from 'gsap'
 // import { ScrollTrigger} from 'gsap/all';
@@ -36,7 +38,7 @@ const Consultation = (props) => {
                         Get in touch with us about your new project below or send us a quick message.
                     </p>
                 </div>
-                <form ref={form} onSubmit={sendEmail}>
+                <form action='' ref={form} onSubmit={sendEmail}>
                     <div className="form-row">
                         <div className="input-data">
                             <input type="text" name='name' id='name' required />
@@ -71,7 +73,22 @@ const Consultation = (props) => {
                     {/* <div className="submit-btn">
                         <FormSubmitBtn />
                     </div> */}
-                    <input className='submit' type="submit" value="Send" />
+                    <input className='submit' type="submit" value="Send" onClick={() => {
+                        Swal.fire({
+                            title: '<h2>Your Message Has Been Delivered.</h2>',
+                            html:
+                                "<a href='/home'><button className='modal'>Home Page</button></a>" +
+                                "<a href='/about'><button className='modal'>About Page</button></a>" +
+                                "<a href='/solutions'><button className='modal'>Solutions Page</button></a>",
+                            showConfirmButton: false,
+                            focusConfirm: false,
+                            showCloseButton: true,
+                            background: '#0E0E0E',
+                            padding: '2rem',
+
+                        });
+                        }}
+                    />
                 </form>
             </div>
             <div className="contact-right">

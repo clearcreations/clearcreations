@@ -143,6 +143,22 @@ input[type=submit]:hover{
     border-radius: 50%;
 }
 
+/* Confirmation Modal */
+button{
+    background-color: #0E0E0E;
+    border: 2px solid #F8F8FF;
+    color: #F8F8FF;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin: 15px;
+}
+
+button:hover{
+    background-color: #0F52BA;
+    border: none;
+    cursor: pointer;
+}
+
 /* Media Queries */
 /* Consultation Component */
 @media(max-width: 1200px) and (min-width: 1000px){

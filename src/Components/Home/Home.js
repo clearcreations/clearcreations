@@ -13,6 +13,7 @@ import Tech from '../Images/technology.jpg'
 import { gsap } from 'gsap'
 import { ScrollTrigger} from 'gsap/all';
 import 'animate.css'
+import { Helmet } from 'react-helmet'
 
 
 const Home = (props) => {
@@ -124,6 +125,21 @@ const Home = (props) => {
 
     return (
         <div className="home">
+            <Helmet>
+                <title>Clear Creations | Branding Agency</title>
+                <meta 
+                    name='description' 
+                    content='Clear Creations is an independent agency dedicated to creating the brand, digital products and campaigns you need to take your company to the next level' 
+                />
+                <meta
+                    name='keywords'
+                    content='branding agency, digital marketing, web design, web development, brand identity, logo design, brand strategy, website maintenance, email marketing, content marketing, marketing automation, social media management, seo, search engine optimization, google ads, pay per click'
+                />
+                <meta 
+                    name='robots' 
+                    content='index, follow'
+                /> 
+            </Helmet>
             <div className="container">
                 <div className="hero-section">
                     <div className="hero-left" ref={el}>

@@ -4,6 +4,7 @@ import '../Consultation/Consultation.css'
 import smImg from '../Images/sm-contact.svg'
 import lgImg from '../Images/lg-contact.svg'
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet'
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
 // import FormSubmitBtn from '../Buttons/FormSubmitBtn'
 // import { gsap } from 'gsap'
@@ -30,6 +31,21 @@ const Consultation = (props) => {
     
     return(
         <div className="container contact">
+            <Helmet>
+                <title>Clear Creations | Branding Consultation</title>
+                <meta 
+                    name='description' 
+                    content='Clear Creations is an independent agency dedicated to creating the brand, digital products and campaigns you need to take your company to the next level' 
+                />
+                <meta
+                    name='keywords'
+                    content='branding agency, digital marketing, web design, web development, brand identity, logo design, brand strategy, website maintenance, email marketing, content marketing, marketing automation, social media management, seo, search engine optimization, google ads, pay per click'
+                />
+                <meta 
+                    name='robots' 
+                    content='index, follow'
+                /> 
+            </Helmet>
             <div className="contact-left">
                 <div className="contact-text">
                     <h2>Ready For Clarity?</h2>

@@ -1,6 +1,5 @@
 .solutions-hero-blurb{
     height: 100%;
-    margin-top: 20%;
 }
 
 .solutions .scroll-indicator{
@@ -107,5 +106,9 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 50px;
+    }
+
+    .solutions-hero-blurb{
+        margin-top: 20%;
     }
 }

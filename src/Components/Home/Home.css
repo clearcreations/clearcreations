@@ -176,6 +176,7 @@ marquee{
     align-items: center;
     text-align: center;
     padding: 15% 0;
+    margin-top: 0;
 }
 
 .blurb{

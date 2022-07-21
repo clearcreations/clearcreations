@@ -1,6 +1,5 @@
 .about-blurb{
     height: 100%;
-    margin-top: 20%;
     padding-bottom: 0;
 }
 
@@ -123,6 +122,10 @@
 @media(max-width: 768px){
     .about-hero{
         height: 100vh;
+    }
+
+    .about-blurb{
+        margin-top: 20%;
     }
 
     .the-brand-blurb{
